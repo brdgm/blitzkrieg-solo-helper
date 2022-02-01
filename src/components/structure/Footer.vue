@@ -1,34 +1,42 @@
 <template>
   <div class="footer bg-dark fixed-bottom">
     <div class="links">
-      <a href="#" data-bs-toggle="modal" data-bs-target="#creditsModal">{{ t('footer.credits') }}</a>
+      <a href="#" data-bs-toggle="modal" data-bs-target="#creditsModal">{{t('footer.credits')}}</a>
     </div>
-    <div class="version">v1.0</div>
+    <div class="version">{{buildNumber}}</div>
   </div>
 
   <div class="modal" id="creditsModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title">Credits</h5>
+          <h5 class="modal-title">{{t('footer.credits')}}</h5>
           <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <dd>Game design</dd>
-          <dl>Paolo Mori</dl>
-          <dd>Solo mode design</dd>
-          <dl>Dávid Turczi</dl>
-          <dd>Development and testing</dd>
-          <dl>Nick Shaw</dl>
-          <dd>Graphic design</dd>
-          <dl>Nick Avallone</dl>
-          <dd>Solo Helper Application Development</dd>
-          <dl>Stefan Seifert</dl>
-          <dd>Version</dd>
-          <dl>1.0 (2022)</dl>
+          <h4>{{t('gameTitle')}}</h4>
+          <dl>
+            <dt>Game design</dt>
+            <dd>Paolo Mori</dd>
+            <dt>Solo mode design</dt>
+            <dd>Dávid Turczi</dd>
+            <dt>Development and testing</dt>
+            <dd>Nick Shaw</dd>
+            <dt>Graphic design</dt>
+            <dd>Nick Avallone</dd>
+          </dl>
+          <h4 class="border-top pt-3">{{appTitle}}</h4>
+          <dl>
+            <dt>Application Development</dt>
+            <dd>Stefan Seifert</dd>
+            <dt>Version</dt>
+            <dd>{{buildNumber}}</dd>
+            <dt>Source Code (Apache-2.0 License)</dt>
+            <dd><a href="https://github.com/brdgm/blitzkrieg-solo-helper" target="_blank">https://github.com/brdgm/blitzkrieg-solo-helper</a></dd>
+          </dl>
         </div>
         <div class="modal-footer">
-          <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button class="btn btn-secondary" data-bs-dismiss="modal">{{t('action.close')}}</button>
         </div>
       </div>
     </div>
@@ -45,6 +53,12 @@ export default defineComponent({
     const { t } = useI18n()
     return { t }
   },
+  data() {
+    return {
+      buildNumber: process.env.VUE_APP_BUILD_NUMBER || '',
+      appTitle: process.env.VUE_APP_TITLE
+    }
+  }
 })
 </script>
 
@@ -72,7 +86,7 @@ export default defineComponent({
     text-align: right;
   }
 }
-.modal dd {
+.modal dt {
   font-weight: bold;
 }
 </style>

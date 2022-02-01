@@ -2,16 +2,23 @@ import { InjectionKey } from 'vue'
 import { createStore, useStore as baseUseStore, Store } from 'vuex'
 import DifficultyLevel from '@/services/enum/DifficultyLevel'
 import RegionSteps from '@/services/RegionSteps'
+import Stratagem from '@/services/enum/Stratagem'
 
-const LOCALSTORAGE_KEY = 'brdgm.blitzkrieg.store'
+const LOCALSTORAGE_KEY = process.env.VUE_APP_LOCALSTORAGE_KEY_PREFIX + "store"
 
 export interface State {
   language: string,
-  setup: Setup
+  setup: Setup,
+  rounds: Round[]
 }
 export interface Setup {
   difficultyLevel: DifficultyLevel,
   regions: RegionSteps[]
+}
+export interface Round {
+  round: number,
+  stratagem: Stratagem,
+  unitRoll: number
 }
 
 declare module '@vue/runtime-core' {
@@ -29,7 +36,8 @@ export const store = createStore<State>({
     setup: {
       difficultyLevel: DifficultyLevel.EASY,
       regions: []
-    }
+    },
+    rounds: []
   },
   mutations: {
     // reload state from local storage
@@ -48,8 +56,17 @@ export const store = createStore<State>({
     setupRegions(state : State, regions: RegionSteps[]) {
       state.setup.regions = regions
     },
-    abortGame(state : State) {
+    round(state : State, round: Round) {
+      // remove round from state if it already exists
+      const existingRound = state.rounds.find(r => r.round==round.round)
+      if (existingRound) {
+        state.rounds.splice(state.rounds.indexOf(existingRound), 1)
+      }
+      state.rounds.push(round)
+    },
+    endGame(state : State) {
       state.setup.regions = []
+      state.rounds = []
     },
   }
 })
@@ -60,6 +77,6 @@ store.subscribe((mutation, state) => {
 })
 
 // define your own `useStore` composition function
-export function useStore () {
+export function useStore() : Store<State> {
   return baseUseStore(key)
 }

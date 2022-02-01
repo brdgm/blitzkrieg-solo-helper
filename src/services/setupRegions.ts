@@ -3,6 +3,12 @@ import Region from "./enum/Region";
 import RegionSteps from "./RegionSteps";
 import randomEnum from "@/util/randomEnum";
 
+/**
+ * Randomly picks a number of regions and advances the marker steps
+ * on each depending on difficulty level.
+ * @param level Difficutly level
+ * @returns Steps to advance in selected regions
+ */
 export default function(level: DifficultyLevel) : RegionSteps[] {
   const result : RegionSteps[] = []
 

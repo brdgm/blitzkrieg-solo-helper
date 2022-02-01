@@ -1,8 +1,8 @@
 <template>
   <Header/>
 
-  <div class="container-fluid mt-5">
-    <router-view/>
+  <div class="container-fluid mt-5 mb-5">
+    <router-view :key="$route.fullPath"/>
   </div>
 
   <Footer/>

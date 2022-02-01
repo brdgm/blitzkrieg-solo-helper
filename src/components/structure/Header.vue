@@ -1,7 +1,7 @@
 <template>
   <div class="header bg-dark fixed-top">
     <a class="logo" href="/">
-      <img class="icon" src="../../assets/structure/headerNavIcon.svg" alt="">
+      <img class="icon" src="@/assets/structure/headerNavIcon.svg" alt="">
       <div class="title">brdgm.me</div>
     </a>
 
@@ -21,7 +21,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { useStore } from '../../store'
+import { useStore } from '@/store'
 
 export default defineComponent({
   name: 'Header',
@@ -65,6 +65,7 @@ export default defineComponent({
     }
     display: inline;
     flex-grow: 1;
+    white-space: nowrap;
   }
   a.logo, a.logo:hover, a.logo:visited, a.logo:active {
     text-decoration: none;
@@ -74,6 +75,8 @@ export default defineComponent({
     font-weight: bold;
     display: inline;
     flex-grow: 1;
+    overflow: hidden;
+    white-space: nowrap;
   }
   .langSelector, .langSelector button {
     text-transform: uppercase;

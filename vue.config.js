@@ -16,7 +16,7 @@ module.exports = {
   pages: {
     index: {
       entry: 'src/main.ts',
-      title: 'Blitzkrieg! Solo Helper'
+      title: process.env.VUE_APP_TITLE
     }
   }
 };

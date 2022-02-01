@@ -12,6 +12,73 @@
     "4": "Afrika & Naher Osten",
     "5": "Südostasien"
   },
+  "stratagem": {
+    "big-guns": "Schwere Geschütze",
+    "counterattack": "Gegenangiff",
+    "economic-warfare": "Bomberkrieg",
+    "for-the-glory": "Für Ruhm und Ehre",
+    "rapid-deployment": "Schneller Aufmarsch",
+    "research-development": "Forschung & Entwicklung",
+    "secure": "Absichern",
+    "steamroll": "Überrollen"
+  },
+  "info": {
+    "greatestChange": {
+      "title": "Stärkste Änderung",
+      "prio1": "Deine Führung auf einem Kriegsschauplatz wird Führung des AI Bot",
+      "prio2": "Gleichstand auf einem Kriegsschauplatz wird Führung des Gegners",
+      "prio3": "Deine Führung auf einem Kriegsschauplatz wird Gleichstand",
+      "prio4": "Führung des AI Bot wird größere Führung",
+      "prio5": "Größere Führung von Dir wird zu weniger großen Führung",
+      "prio6": "Jede andere Änderung, die nicht dazu führt, dass Du einen Feldzug/Kriegsschauplatz gewinnst",
+      "prio7": "Jede andere Änderung"
+    }
+  },
+  "theatre": {
+    "title": "Kriegsschauplatz",
+    "prio1": "Kriegschautplatz gewinnen durch dein Einsatz von einer Einheit?",
+    "prio2": "Feldzug gewinnen durch dein Einsatz von einer Einheit?",
+    "prio3": {
+      "counterattack": "Kriegsschauplatz, an dem Du führst",
+      "economic-warfare": "Kriegsschauplatz mit verfügbarer Industrieproduktion oder Bombardierung",
+      "for-the-glory": "Kriegsschauplatz mit den meisten KP, Kriegsschauplätze mit KP-Schlachtfeldern",
+      "research-development": "Forschungs-Schlachtfelder verfügbar",
+      "secure": "Kriegsschauplatz wo der AI bot führt"
+    },
+    "prio4": "Die meisten freien Schlachtfelder in offenem Feldzug",
+    "prio5": "Die meisten KP im offenen Feldzug",
+    "prio6": "Von oben links nach unten rechts"
+  },
+  "campaign": {
+    "title": "Schlachtfeld auf Feldzug",
+    "prio1": "Gewinn durch einfache Platzierung?",
+    "prio2": {
+      "economic-warfare": "Industrieproduktion wenn AI bot ≤4 Einheiten hat, ansonsten Bombardierung",
+      "for-the-glory": "KP-Schlachtfeld"
+    },
+    "prio3": "Schlachtfeld-Priorisierung",
+    "prio4": "Von links nach rechts",
+    "priority": {
+      "1-propaganda": "AI bot ≥20KP",
+      "2-strategic-advantage": "➔ Größte Änd.",
+      "3-propaganda": "Du führst ≥3VP",
+      "4-industrial-production": "AI bot ≤4 Einh."
+    }
+  },
+  "unit": {
+    "title": "Einheit",
+    "prio1": "Gewinn durch einfache Platzierung?",
+    "prio2": {
+      "big-guns": "Spezialeinheit, größte Änderung",
+      "counterattack": "Größte Änderung",
+      "rapid-deployment": "Die äußerste linke (einsetzbare) Einheit",
+      "research-development": "Spezialenheit, wenn kein Forschungs-Schlachtfeld gewählt wurde"
+    },
+    "prio3": "Schlachtfeld ohne Effekt: Einheit mit Stärke >0",
+    "prio4": "Letztes Schlachtfeld im Feldzug: keine Blitz-Einheiten",
+    "prio5": "Wenn AI bot ≥20 KP: Einheit mit größter Stärke",
+    "prio6": "Wähle Einheit <b>#{unitRoll}</b> von links nach rechts, ggf. in einer Schleife)"
+  },
   "home": {
     "title": "Winziger Weltkrieg Solo Helper",
     "play1": "Spiele den <b>Solo-Modus</b> von <a href='https://boardgamegeek.com/boardgame/258210/blitzkrieg-world-war-two-20-minutes' target='_blank'><b>Winziger Weltkrieg / Blitzkrieg!</b></a>",
@@ -34,12 +101,21 @@
       "reroll": "Regionen neu bestimmen"
     }
   },
+  "notfound": {
+    "title": "Nicht Gefunden"
+  },
   "action": {
     "playGame": "Spielen",
     "startGame": "Spiel starten",
+    "nextRound": "Nächste Runde",
     "abortGame": "Spiel abbrechen",
     "abortGameConfirm": "Das aktuelle Spiel wird abgebrochen - bist Du sicher?",
-    "cancel": "Abbrechen"
+    "finishGame": "Spiel beenden",
+    "finishGameConfirm": "Dieses Spield wird beendet - bist Du sicher?",
+    "cancel": "Abbrechen",
+    "backToHome": "Zurück zum Anfang",
+    "back": "Zurück",
+    "close": "Schließen"
   },
   "footer": {
     "credits": "Credits"

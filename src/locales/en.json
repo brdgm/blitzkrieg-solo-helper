@@ -12,6 +12,73 @@
     "4": "Africa & Middle East",
     "5": "South East Africa"
   },
+  "stratagem": {
+    "big-guns": "Big Guns",
+    "counterattack": "Counterattack",
+    "economic-warfare": "Economic Warfare",
+    "for-the-glory": "For the Glory",
+    "rapid-deployment": "Rapid Deployment",
+    "research-development": "Research & Development",
+    "secure": "Secure",
+    "steamroll": "Steamroll"
+  },
+  "info": {
+    "greatestChange": {
+      "title": "Greatest Change",
+      "prio1": "Turns your lead over a theatre into an AI bot lead",
+      "prio2": "Turns a tie over a theatre into an AI bot lead",
+      "prio3": "Turns your lead over a theatre into a tie",
+      "prio4": "Increases a more extreme AI bot lead",
+      "prio5": "Decreases a more extreme lead on your side",
+      "prio6": "Every other change that does not lead to you winning a campaign/theatre",
+      "prio7": "Every other change"
+    }
+  },
+  "theatre": {
+    "title": "Theatre",
+    "prio1": "Close and win theatre with a single placement?",
+    "prio2": "Close and win campaign with a single placement?",
+    "prio3": {
+      "counterattack": "Theatre where you are in lead",
+      "economic-warfare": "Industrial or bombing spaces available",
+      "for-the-glory": "Hightest VP campaign, then theatres with VP spaces",
+      "research-development": "Research space available",
+      "secure": "Theatre where AI bot is in lead"
+    },
+    "prio4": "Most empty spaces in open campaign",
+    "prio5": "Hightest VP among open campaigns",
+    "prio6": "Top to bottom"
+  },
+  "campaign": {
+    "title": "Campaign space",
+    "prio1": "Single placement win?",
+    "prio2": {
+      "economic-warfare": "Industrial production if AI bot has ≤4 units, otherwise bombing",
+      "for-the-glory": "VP space"
+    },
+    "prio3": "Prioritise spaces",
+    "prio4": "Left to right",
+    "priority": {
+      "1-propaganda": "AI bot ≥20VP",
+      "2-strategic-advantage": "➔ Great. change",
+      "3-propaganda": "You lead ≥3VP",
+      "4-industrial-production": "AI bot ≤4 units"
+    }
+  },
+  "unit": {
+    "title": "Unit",
+    "prio1": "Single placement win?",
+    "prio2": {
+      "big-guns": "Special weapons, greatest change",
+      "counterattack": "Greatest change",
+      "rapid-deployment": "Leftmost valid unit",
+      "research-development": "Special weapon if non-research space was selected"
+    },
+    "prio3": "If no-effect space: prefer non-zero units",
+    "prio4": "If last space of campaign: prefer non-blitz units",
+    "prio5": "If AI bot ≥20 VP: unit with highest strength",
+    "prio6": "Pick unit <b>#{unitRoll}</b> (left to right, looping around)"
+  },
   "home": {
     "title": "Blitzkrieg! Solo Helper",
     "play1": "Play the <b>Solo Mode</b> of <a href='https://boardgamegeek.com/boardgame/258210/blitzkrieg-world-war-two-20-minutes' target='_blank'><b>Blitzkrieg!</b></a>",
@@ -34,12 +101,21 @@
       "reroll": "Randomize Regions"
     }
   },
+  "notfound": {
+    "title": "Not Found"
+  },
   "action": {
     "playGame": "Play Game",
     "startGame": "Start Game",
+    "nextRound": "Next Round",
     "abortGame": "Abort Game",
     "abortGameConfirm": "Aborting the running game - are you sure?",
-    "cancel": "Cancel"
+    "finishGame": "Finish Game",
+    "finishGameConfirm": "Finishing this game - are you sure?",
+    "cancel": "Cancel",
+    "backToHome": "Back to Home",
+    "back": "Back",
+    "close": "Close"
   },
   "footer": {
     "credits": "Credits"

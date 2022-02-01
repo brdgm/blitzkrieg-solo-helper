@@ -32,3 +32,6 @@ npm-debug.log
 .vlt
 .vlt-sync*
 .brackets.json
+
+dist/
+coverage/
