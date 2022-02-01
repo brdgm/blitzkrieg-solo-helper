@@ -1,6 +1,9 @@
 # Blitzkrieg! Solo Helper
 
-## Project setup
+Application: https://brdgm.me/blitzkrieg/
+
+
+## Development
 ```
 npm install
 ```
