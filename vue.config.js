@@ -1,3 +1,8 @@
+var packageJson = require('./package.json')
+process.env.VUE_APP_TITLE = packageJson.description
+process.env.VUE_APP_BUILD_NUMBER= packageJson.version
+process.env.VUE_APP_LOCALSTORAGE_KEY_PREFIX= packageJson.name + "."
+
 module.exports = {
   publicPath: '',
 
