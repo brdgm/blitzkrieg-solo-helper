@@ -1,0 +1,47 @@
+{
+  "gameTitle": "Winziger Weltkrieg",
+  "difficultyLevel": {
+    "1": "Leicht",
+    "2": "Normal",
+    "3": "Schwierig"
+  },
+  "region": {
+    "1": "Westeuropa",
+    "2": "Pazifik",
+    "3": "Osteuropa",
+    "4": "Afrika & Naher Osten",
+    "5": "Südostasien"
+  },
+  "home": {
+    "title": "Winziger Weltkrieg Solo Helper",
+    "play1": "Spiele den <b>Solo-Modus</b> von <a href='https://boardgamegeek.com/boardgame/258210/blitzkrieg-world-war-two-20-minutes' target='_blank'><b>Winziger Weltkrieg / Blitzkrieg!</b></a>",
+    "play2": "Um den Solo-Modus zu spielen, benötigst du nur das Basisspiel. Diese Applikation ersetzt alle Solo-Komponenten."
+  },
+  "setup": {
+    "title": "Spielaufbau",
+    "you": {
+      "title": "Du",
+      "player": "Alliierte",
+      "draw": "Ziehe <b>drei Einheiten</b> (wie üblich)"
+    },
+    "bot": {
+      "title": "AI Bot",
+      "player": "Achsenmächte",
+      "difficulty": "Schwierigkeitsstufe",
+      "draw": "Ziehe <b>fünf Einheiten</b> in eine Reihe (zufällige Reihenfolge)",
+      "advance": "Bewege den Marker zugunsten des AI bot:",
+      "step": "{count} Schritt | {count} Schritte",
+      "reroll": "Regionen neu bestimmen"
+    }
+  },
+  "action": {
+    "playGame": "Spielen",
+    "startGame": "Spiel starten",
+    "abortGame": "Spiel abbrechen",
+    "abortGameConfirm": "Das aktuelle Spiel wird abgebrochen - bist Du sicher?",
+    "cancel": "Abbrechen"
+  },
+  "footer": {
+    "credits": "Credits"
+  }
+}
