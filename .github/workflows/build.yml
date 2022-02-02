@@ -4,11 +4,11 @@ on:
   push:
     branches-ignore:
       - experimental/**
-      - main
+      - master
   pull_request:
     branches-ignore:
       - experimental/**
-      - main
+      - master
   workflow_dispatch:
 
 jobs:
