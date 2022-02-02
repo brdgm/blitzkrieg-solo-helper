@@ -26,6 +26,7 @@ module.exports = {
   },
 
   pwa: {
-    name: process.env.VUE_APP_TITLE
+    name: process.env.VUE_APP_TITLE,
+    themeColor: #333
   }
 }
