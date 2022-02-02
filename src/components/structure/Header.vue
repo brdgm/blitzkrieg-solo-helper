@@ -1,6 +1,6 @@
 <template>
   <div class="header bg-dark fixed-top">
-    <a class="logo" href="/">
+    <a class="logo" href="https://brdgm.me/">
       <img class="icon" src="@/assets/structure/headerNavIcon.svg" alt="">
       <div class="title">brdgm.me</div>
     </a>
