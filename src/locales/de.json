@@ -32,12 +32,24 @@
       "prio5": "Größere Führung von Dir wird zu weniger großen Führung",
       "prio6": "Jede andere Änderung, die nicht dazu führt, dass Du einen Feldzug/Kriegsschauplatz gewinnst",
       "prio7": "Jede andere Änderung"
+    },
+    "effects": {
+      "title": "Schlachtfeld-Effekte",
+      "info1": "<b>Industrieproduktion</b>: Gezogene Marker ans Ende seiner Einheiten legen.",
+      "info2": "<b>Forschung</b>: Gezogene Spezialeinheiten in den Beutel des AI bots legen.",
+      "info3": "<b>Industrielle Forschung</b>: Den gezogenen Spezialeinheitenmarker ans Ende seiner Einheitenreihe legen.",
+      "info4": "<b>Strategischer Vorteil</b>: Den Modifikator dort anwenden, wo er die <i>stärkste Änderung</i> bewirkt.",
+      "info5": "<b>Taktischer Vorteil</b>: Den Modifikator wie üblich auf diesen Kriegsschauplatz anwenden.",
+      "info6": "<b>Propaganda</b>: Der AI bot erhält Kriegspunkte wie üblich.",
+      "info7": "<b>Wissenschaftler</b>: Sie gilt als Luftwaffeneinheit mit Stärke 3.",
+      "info8": "<b>Blitz-Truppe</b>: Hat der AI bot noch mindestens 1 Einheit, wird Schritt B seines Spielzugs erneut ausgeführt (mit demselben Strategem), aber auf dem Kriegsschauplatz, auf dem die Blitz-Truppe eingesetzt wurde (sofern möglich).",
+      "info9": "<i>Du</i> führst eine <b>Bombardierung</b> aus: 1 Nicht-Spezialeinheiten-Marker nach Deiner Wahl aus der Reihe des AI bots in dessen Beutel zurücklegen. Liegen dort nur Spezialeinheiten, darfst Du 1 davon wählen."
     }
   },
   "theatre": {
     "title": "Kriegsschauplatz",
-    "prio1": "Kriegschautplatz gewinnen durch dein Einsatz von einer Einheit?",
-    "prio2": "Feldzug gewinnen durch dein Einsatz von einer Einheit?",
+    "prio1": "Kriegsschauplatz, den er beenden und gewinnen kann",
+    "prio2": "Feldzug, den er beenden und gewinnen kann",
     "prio3": {
       "counterattack": "Kriegsschauplatz, an dem Du führst",
       "economic-warfare": "Kriegsschauplatz mit verfügbarer Industrieproduktion oder Bombardierung",
@@ -45,13 +57,13 @@
       "research-development": "Forschungs-Schlachtfelder verfügbar",
       "secure": "Kriegsschauplatz wo der AI bot führt"
     },
-    "prio4": "Die meisten freien Schlachtfelder in offenem Feldzug",
-    "prio5": "Die meisten KP im offenen Feldzug",
+    "prio4": "Die meisten freien Schlachtfelder in aktiven Feldzug",
+    "prio5": "Die meisten KP für den aktuellen Feldzug",
     "prio6": "Von oben links nach unten rechts"
   },
   "campaign": {
     "title": "Schlachtfeld auf Feldzug",
-    "prio1": "Gewinn durch einfache Platzierung?",
+    "prio1": "Beenden und gewinnen von Kriegsschauplatz/Feldzug",
     "prio2": {
       "economic-warfare": "Industrieproduktion wenn AI bot ≤4 Einheiten hat, ansonsten Bombardierung",
       "for-the-glory": "KP-Schlachtfeld"
@@ -67,17 +79,17 @@
   },
   "unit": {
     "title": "Einheit",
-    "prio1": "Gewinn durch einfache Platzierung?",
+    "prio1": "Kriegsschauplatz/Feldzug beenden",
     "prio2": {
       "big-guns": "Spezialeinheit, größte Änderung",
       "counterattack": "Größte Änderung",
       "rapid-deployment": "Die äußerste linke (einsetzbare) Einheit",
-      "research-development": "Spezialenheit, wenn kein Forschungs-Schlachtfeld gewählt wurde"
+      "research-development": "Spezialeinheit, wenn kein Forschungs-Schlachtfeld gewählt wurde"
     },
-    "prio3": "Schlachtfeld ohne Effekt: Einheit mit Stärke >0",
-    "prio4": "Letztes Schlachtfeld im Feldzug: keine Blitz-Einheiten",
-    "prio5": "Wenn AI bot ≥20 KP: Einheit mit größter Stärke",
-    "prio6": "Wähle Einheit <b>#{unitRoll}</b> von links nach rechts, ggf. in einer Schleife)"
+    "prio3": "Kein Schlachtfeld-Effekt: Einheit mit Stärke >0",
+    "prio4": "Letztes Feld des Feldzug: Einheiten, die keine Blitz-Einheiten sind",
+    "prio5": "Wenn AI bot ≥20 KP: Einheit mit der größten Stärke",
+    "prio6": "Wähle Einheit <b>#{unitRoll}</b> von links nach rechts (ggf. in einer Schleife)"
   },
   "home": {
     "title": "Winziger Weltkrieg Solo Helper",
@@ -111,7 +123,7 @@
     "abortGame": "Spiel abbrechen",
     "abortGameConfirm": "Das aktuelle Spiel wird abgebrochen - bist Du sicher?",
     "finishGame": "Spiel beenden",
-    "finishGameConfirm": "Dieses Spield wird beendet - bist Du sicher?",
+    "finishGameConfirm": "Dieses Spiel wird beendet - bist Du sicher?",
     "cancel": "Abbrechen",
     "backToHome": "Zurück zum Anfang",
     "back": "Zurück",

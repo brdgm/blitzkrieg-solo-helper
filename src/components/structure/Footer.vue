@@ -14,7 +14,7 @@
           <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <h4>{{t('gameTitle')}}</h4>
+          <h4><a href="https://boardgamegeek.com/boardgame/258210/blitzkrieg-world-war-two-20-minutes" target="_blank">{{t('gameTitle')}}</a></h4>
           <dl>
             <dt>Game design</dt>
             <dd>Paolo Mori</dd>
@@ -24,6 +24,8 @@
             <dd>Nick Shaw</dd>
             <dt>Graphic design</dt>
             <dd>Nick Avallone</dd>
+            <dt>Publisher</dt>
+            <dd><a href="https://www.pscgames.co.uk/" target="_blank">PSC Games</a></dd>
           </dl>
           <h4 class="border-top pt-3">{{appTitle}}</h4>
           <dl>

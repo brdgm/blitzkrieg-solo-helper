@@ -32,12 +32,24 @@
       "prio5": "Decreases a more extreme lead on your side",
       "prio6": "Every other change that does not lead to you winning a campaign/theatre",
       "prio7": "Every other change"
+    },
+    "effects": {
+      "title": "Effects",
+      "info1": "<b>Industrial production</b>: Add the required number of tokens to the end of its unit row.",
+      "info2": "<b>Research</b>: Add the drawn special weapon unit into the AI bot’s cup.",
+      "info3": "<b>Research industry</b>: Place the drawn special weapon unit at the end of the row.",
+      "info4": "<b>Strategic advantage</b>: Execute the modifier where it would cause the <i>greatest change</i>.",
+      "info5": "<b>Tactical advantage</b>: Execute the modifier in that theatre as normal.",
+      "info6": "<b>Propaganda</b>: It receives victory points as normal.",
+      "info7": "<b>Scientist unit</b>: Treat it as a 3-strength airforce unit.",
+      "info8": "<b>Blitz unit</b>: If the AI bot has at least one unit remaining, perform step B of the AI bot’s turn again (using the same stratagem), but using the same theatre as the just-placed Blitz unit (if possible).",
+      "info9": "<i>You</i> play a <b>bombing effect</b>: Select one non-special weapon in the AI bot’s unit row (your choice) and discard it back into the research pile. If all the AI bot’s unit are special weapons, just choose one of those to discard instead."
     }
   },
   "theatre": {
     "title": "Theatre",
-    "prio1": "Close and win theatre with a single placement?",
-    "prio2": "Close and win campaign with a single placement?",
+    "prio1": "A theatre it can close and win",
+    "prio2": "A campaign it can close and win",
     "prio3": {
       "counterattack": "Theatre where you are in lead",
       "economic-warfare": "Industrial or bombing spaces available",
@@ -46,18 +58,18 @@
       "secure": "Theatre where AI bot is in lead"
     },
     "prio4": "Most empty spaces in open campaign",
-    "prio5": "Hightest VP among open campaigns",
-    "prio6": "Top to bottom"
+    "prio5": "Hightest VP for current campaign",
+    "prio6": "Top > bottom"
   },
   "campaign": {
     "title": "Campaign space",
-    "prio1": "Single placement win?",
+    "prio1": "Position that will close and win a theatre/campaign",
     "prio2": {
       "economic-warfare": "Industrial production if AI bot has ≤4 units, otherwise bombing",
       "for-the-glory": "VP space"
     },
-    "prio3": "Prioritise spaces",
-    "prio4": "Left to right",
+    "prio3": "Prioritize positions",
+    "prio4": "Left > right",
     "priority": {
       "1-propaganda": "AI bot ≥20VP",
       "2-strategic-advantage": "➔ Great. change",
@@ -67,17 +79,17 @@
   },
   "unit": {
     "title": "Unit",
-    "prio1": "Single placement win?",
+    "prio1": "Close a theatre/campaign",
     "prio2": {
       "big-guns": "Special weapons, greatest change",
       "counterattack": "Greatest change",
       "rapid-deployment": "Leftmost valid unit",
       "research-development": "Special weapon if non-research space was selected"
     },
-    "prio3": "If no-effect space: prefer non-zero units",
-    "prio4": "If last space of campaign: prefer non-blitz units",
-    "prio5": "If AI bot ≥20 VP: unit with highest strength",
-    "prio6": "Pick unit <b>#{unitRoll}</b> (left to right, looping around)"
+    "prio3": "If no-effect space: Non-zero-value units",
+    "prio4": "If last space of campaign: Non-blitz units",
+    "prio5": "If AI bot ≥20 VP: highest strength units",
+    "prio6": "Select unit <b>#{unitRoll}</b> (left to right, looping around)"
   },
   "home": {
     "title": "Blitzkrieg! Solo Helper",
