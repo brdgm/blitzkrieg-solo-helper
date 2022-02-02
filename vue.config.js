@@ -23,5 +23,9 @@ module.exports = {
       entry: 'src/main.ts',
       title: process.env.VUE_APP_TITLE
     }
+  },
+
+  pwa: {
+    name: process.env.VUE_APP_TITLE
   }
-};
+}
