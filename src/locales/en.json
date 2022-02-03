@@ -72,7 +72,6 @@
     "prio4": "Left > right",
     "priority": {
       "1-propaganda": "AI bot ≥20VP",
-      "2-strategic-advantage": "➔ Great. change",
       "3-propaganda": "You lead ≥3VP",
       "4-industrial-production": "AI bot ≤4 units"
     }

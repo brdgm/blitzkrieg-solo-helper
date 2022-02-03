@@ -8,7 +8,9 @@
 
   <div class="float-end">
     <div class="text-end">
-      <abbr :title="t('info.greatestChange.title')" data-bs-toggle="modal" data-bs-target="#greatestChangeModal">{{t('info.greatestChange.title')}}</abbr><br/>
+      <abbr :title="t('info.greatestChange.title')" data-bs-toggle="modal" data-bs-target="#greatestChangeModal">{{t('info.greatestChange.title')}}</abbr>
+    </div>
+    <div class="text-end mt-2">
       <abbr :title="t('info.greatestChange.title')" data-bs-toggle="modal" data-bs-target="#effectsModal">{{t('info.effects.title')}}</abbr><br/>
     </div>
 
@@ -88,7 +90,6 @@
       </tr>
       <tr>
         <td><img src="@/assets/space/strategic-advantage.png" class="space-icon"></td>
-        <td>{{t('campaign.priority.2-strategic-advantage')}}</td>
       </tr>
       <tr>
         <td><img src="@/assets/space/propaganda.png" class="space-icon"></td>
