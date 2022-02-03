@@ -8,6 +8,7 @@ const LOCALSTORAGE_KEY = process.env.VUE_APP_LOCALSTORAGE_KEY_PREFIX + "store"
 
 export interface State {
   language: string,
+  baseFontSize: number,
   setup: Setup,
   rounds: Round[]
 }
@@ -33,6 +34,7 @@ export const key: InjectionKey<Store<State>> = Symbol()
 export const store = createStore<State>({
   state: {
     language: "en",
+    baseFontSize: 1.0,
     setup: {
       difficultyLevel: DifficultyLevel.EASY,
       regions: []
@@ -68,6 +70,9 @@ export const store = createStore<State>({
       state.setup.regions = []
       state.rounds = []
     },
+    zoomFontSize(state : State, baseFontSize: number) {
+      state.baseFontSize = baseFontSize
+    }
   }
 })
 
