@@ -46,7 +46,6 @@ export default defineComponent({
 })
 </script>
 
-
 <style lang="scss" scoped>
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/variables";
