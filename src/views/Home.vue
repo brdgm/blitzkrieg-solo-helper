@@ -13,6 +13,12 @@
 
   <router-link to="/setup" tag="button" class="btn btn-primary btn-lg mt-3">{{t('action.playGame')}}</router-link>
 
+  <p class="disclaimer">
+    This is not an official PSC Games product and has no affiliation with <a href="https://www.pscgames.co.uk/" target="_blank">PSC Games</a>.
+    All art in this app is from <a href="https://www.pscgames.co.uk/games/blitzkrieg" target="_blank">Blitzkrieg!</a>.
+    See <a href="#" data-bs-toggle="modal" data-bs-target="#creditsModal">{{t('footer.credits')}}</a>.
+  </p>
+
 </template>
 
 <script lang="ts">
@@ -27,3 +33,11 @@ export default defineComponent({
   },
 })
 </script>
+
+<style lang="scss" scoped>
+.disclaimer {
+  clear: both;
+  margin-top: 4rem;
+  font-size: smaller;
+}
+</style>
