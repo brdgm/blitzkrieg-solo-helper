@@ -6,7 +6,7 @@
       {{t('action.nextRound')}}
     </router-link>
 
-    <EndGameButton type="finishGame" :back="round > 1 ? '/round/' + (round-1) : ''"/>
+    <FooterButtons endGameButtonType="finishGame" :backButtonRouteTo="backButtonRouteTo"/>
   </div>
 </template>
 
@@ -14,13 +14,13 @@
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRoute } from 'vue-router'
-import EndGameButton from '@/components/structure/EndGameButton.vue'
+import FooterButtons from '@/components/structure/FooterButtons.vue'
 import Stratagem from '@/components/round/Stratagem.vue'
 
 export default defineComponent({
   name: 'Round',
   components: {
-    EndGameButton,
+    FooterButtons,
     Stratagem
   },
   setup() {
@@ -31,5 +31,10 @@ export default defineComponent({
 
     return { t, round }
   },
+  computed: {
+    backButtonRouteTo() : string {
+      return this.round > 1 ? '/round/' + (this.round-1) : ''
+    }
+  }
 })
 </script>
