@@ -12,7 +12,7 @@
         </svg>
       </a>
       <a href="#" class="zoom-icon" @click.prevent="zoomReset">
-        100%
+        {{zoomPercent}}
       </a>
       <a href="#" class="zoom-icon" @click.prevent="zoomOut">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-zoom-out" viewBox="0 0 16 16">
@@ -86,6 +86,11 @@ export default defineComponent({
       baseFontSize: 1
     }
   },
+  computed: {
+    zoomPercent() : string {
+      return Math.floor(this.baseFontSize * 100) + '%'
+    }
+  },
   methods: {
     zoomIn() {
       if (this.baseFontSize < 3) {
@@ -94,7 +99,7 @@ export default defineComponent({
       this.$emit('zoomFontSize', { baseFontSize: this.baseFontSize })
     },
     zoomOut() {
-      if (this.baseFontSize > 0.5) {
+      if (this.baseFontSize > 0.51) {
         this.baseFontSize -= 0.1
       }
       this.$emit('zoomFontSize', { baseFontSize: this.baseFontSize })

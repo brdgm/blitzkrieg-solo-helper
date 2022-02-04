@@ -11,7 +11,7 @@
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { useStore } from './store'
+import { useStore } from '@/store'
 import Header from '@/components/structure/Header.vue'
 import Footer from '@/components/structure/Footer.vue'
 
@@ -45,13 +45,16 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/utilities";
 #content-container {
-  font-size: calc(v-bind(baseFontSize) * 1rem);
-  h1 { font-size: calc(v-bind(baseFontSize) * 2.5rem); }
-  h2 { font-size: calc(v-bind(baseFontSize) * 2rem); }
-  h3 { font-size: calc(v-bind(baseFontSize) * 1.75rem); }
-  h4 { font-size: calc(v-bind(baseFontSize) * 1.5rem); }
-  h5 { font-size: calc(v-bind(baseFontSize) * 1.25rem); }
-  h6 { font-size: calc(v-bind(baseFontSize) * 1rem); }
+  font-size: calc(v-bind(baseFontSize) * $font-size-base);
+  h1 { font-size: calc(v-bind(baseFontSize) * $h1-font-size); }
+  h2 { font-size: calc(v-bind(baseFontSize) * $h2-font-size); }
+  h3 { font-size: calc(v-bind(baseFontSize) * $h3-font-size); }
+  h4 { font-size: calc(v-bind(baseFontSize) * $h4-font-size); }
+  h5 { font-size: calc(v-bind(baseFontSize) * $h5-font-size); }
+  h6 { font-size: calc(v-bind(baseFontSize) * $h6-font-size); }
 }
 </style>
