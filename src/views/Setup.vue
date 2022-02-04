@@ -22,7 +22,7 @@
     <router-link to="/round/1" tag="button" class="btn btn-primary btn-lg mt-3">
       {{t('action.startGame')}}
     </router-link>
-    <EndGameButton type="abortGame"/>
+    <FooterButtons endGameButtonType="abortGame"/>
   </div>
 
 </template>
@@ -31,13 +31,13 @@
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import BotSetup from '@/components/setup/BotSetup.vue'
-import EndGameButton from '@/components/structure/EndGameButton.vue'
+import FooterButtons from '@/components/structure/FooterButtons.vue'
 
 export default defineComponent({
   name: 'Setup',
   components: {
     BotSetup,
-    EndGameButton
+    FooterButtons
   },
   setup() {
     const { t } = useI18n()
