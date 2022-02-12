@@ -21,9 +21,9 @@
     "vuex": "^4.0.2"
   },
   "devDependencies": {
-    "@intlify/vue-i18n-loader": "^3.3.0",
+    "@intlify/vue-i18n-loader": "^4.1.0",
     "@types/chai": "^4.3.0",
-    "@types/mocha": "^5.2.7",
+    "@types/mocha": "^9.1.0",
     "@typescript-eslint/eslint-plugin": "^4.33.0",
     "@typescript-eslint/parser": "^4.33.0",
     "@vue/cli-plugin-babel": "~5.0.0-rc.3",
