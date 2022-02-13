@@ -2,7 +2,7 @@
 
   <div class="float-end m-2 w-25">
     <a href="https://boardgamegeek.com/boardgame/258210/blitzkrieg-world-war-two-20-minutes" target="_blank">
-      <img src="../assets/game.jpg" class="rounded shadow w-100"/>
+      <img src="@/assets/game.jpg" class="rounded shadow w-100"/>
     </a>
   </div>
 
