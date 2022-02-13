@@ -2,7 +2,7 @@
   <div>
     <Stratagem/>
 
-    <router-link :to="'/round/' + (round+1)" tag="button" class="btn btn-primary btn-lg mt-3">
+    <router-link :to="'/round/' + (round+1)" class="btn btn-primary btn-lg mt-3">
       {{t('action.nextRound')}}
     </router-link>
 

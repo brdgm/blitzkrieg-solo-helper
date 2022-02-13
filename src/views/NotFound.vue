@@ -1,7 +1,7 @@
 <template>
   <h1>{{t('notfound.title')}}</h1>
 
-  <router-link to="/" tag="button" class="btn btn-primary mt-3">{{t('action.backToHome')}}</router-link>
+  <router-link to="/" class="btn btn-primary mt-3">{{t('action.backToHome')}}</router-link>
 
 </template>
 

@@ -11,7 +11,7 @@
   <p v-html="t('home.play1')"></p>
   <p v-html="t('home.play2')"></p>
 
-  <router-link to="/setup" tag="button" class="btn btn-primary btn-lg mt-3">{{t('action.playGame')}}</router-link>
+  <router-link to="/setup" class="btn btn-primary btn-lg mt-3">{{t('action.playGame')}}</router-link>
 
   <p class="disclaimer">
     This is not an official PSC Games product and has no affiliation with <a href="https://www.pscgames.co.uk/" target="_blank">PSC Games</a>.

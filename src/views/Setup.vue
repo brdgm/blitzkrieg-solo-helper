@@ -19,7 +19,7 @@
       </div>
     </div>
 
-    <router-link to="/round/1" tag="button" class="btn btn-primary btn-lg mt-3">
+    <router-link to="/round/1" class="btn btn-primary btn-lg mt-3">
       {{t('action.startGame')}}
     </router-link>
     <FooterButtons endGameButtonType="abortGame"/>
