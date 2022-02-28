@@ -3,6 +3,13 @@
 Application: https://brdgm.me/blitzkrieg/
 
 
+## Contribute
+
+This application is Open Source. You can contribute by creating issues or pull requests!
+
+If you want to provide an additional translation, provide a new JSON file in the [locales](https://github.com/brdgm/blitzkrieg-solo-helper/tree/develop/src/locales) folder.
+
+
 ## Development
 ```
 npm install
@@ -27,6 +34,3 @@ npm run test:unit
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
