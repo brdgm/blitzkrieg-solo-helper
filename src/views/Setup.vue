@@ -5,7 +5,7 @@
     <div class="row g-3">
       <div class="col-md-6">
         <div class="border border-5 p-3">
-          <h3>{{t('setup.you.title')}}: <img src="../assets/player/allies.png" class="player-icon"/> {{t('setup.you.player')}}</h3>
+          <h3>{{t('setup.you.title')}}: <img src="@/assets/player/allies.png" class="player-icon"/> {{t('setup.you.player')}}</h3>
           <ol class="mt-3">
             <li v-html="t('setup.you.draw')"></li>
           </ol>
@@ -13,13 +13,13 @@
       </div>
       <div class="col-md-6">
         <div class="border border-5 p-3">
-          <h3>{{t('setup.bot.title')}}: <img src="../assets/player/axis.png" class="player-icon"/> {{t('setup.bot.player')}}</h3>
+          <h3>{{t('setup.bot.title')}}: <img src="@/assets/player/axis.png" class="player-icon"/> {{t('setup.bot.player')}}</h3>
           <BotSetup/>
         </div>
       </div>
     </div>
 
-    <router-link to="/round/1" tag="button" class="btn btn-primary btn-lg mt-3">
+    <router-link to="/round/1" class="btn btn-primary btn-lg mt-3">
       {{t('action.startGame')}}
     </router-link>
     <FooterButtons endGameButtonType="abortGame"/>

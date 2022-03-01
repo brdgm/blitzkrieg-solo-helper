@@ -2,7 +2,7 @@
 
   <div class="float-end m-2 w-25">
     <a href="https://boardgamegeek.com/boardgame/258210/blitzkrieg-world-war-two-20-minutes" target="_blank">
-      <img src="../assets/game.jpg" class="rounded shadow w-100"/>
+      <img src="@/assets/game.jpg" class="rounded shadow w-100"/>
     </a>
   </div>
 
@@ -11,7 +11,7 @@
   <p v-html="t('home.play1')"></p>
   <p v-html="t('home.play2')"></p>
 
-  <router-link to="/setup" tag="button" class="btn btn-primary btn-lg mt-3">{{t('action.playGame')}}</router-link>
+  <router-link to="/setup" class="btn btn-primary btn-lg mt-3">{{t('action.playGame')}}</router-link>
 
   <p class="disclaimer">
     This is not an official PSC Games product and has no affiliation with <a href="https://www.pscgames.co.uk/" target="_blank">PSC Games</a>.

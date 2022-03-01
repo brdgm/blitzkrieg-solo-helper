@@ -1,6 +1,6 @@
 <template>
   <div class="end-game-buttons">
-    <router-link v-if="backButtonRouteTo" :to="backButtonRouteTo" tag="button" class="btn btn-secondary btn-sm me-2">{{t('action.back')}}</router-link>
+    <router-link v-if="backButtonRouteTo" :to="backButtonRouteTo" class="btn btn-secondary btn-sm me-2">{{t('action.back')}}</router-link>
     <button v-if="endGameButtonType" class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#endGameModal">{{t('action.' + endGameButtonType)}}</button>
   </div>
 
@@ -56,7 +56,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .end-game-buttons {
-  position: absolute;
+  position: fixed;
   right: 0;
   bottom: 0;
   z-index: 5000;

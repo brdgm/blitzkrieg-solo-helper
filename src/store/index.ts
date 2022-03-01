@@ -7,18 +7,18 @@ import Stratagem from '@/services/enum/Stratagem'
 const LOCALSTORAGE_KEY = process.env.VUE_APP_LOCALSTORAGE_KEY_PREFIX + "store"
 
 export interface State {
-  language: string,
-  baseFontSize: number,
-  setup: Setup,
+  language: string
+  baseFontSize: number
+  setup: Setup
   rounds: Round[]
 }
 export interface Setup {
-  difficultyLevel: DifficultyLevel,
+  difficultyLevel: DifficultyLevel
   regions: RegionSteps[]
 }
 export interface Round {
-  round: number,
-  stratagem: Stratagem,
+  round: number
+  stratagem: Stratagem
   unitRoll: number
 }
 

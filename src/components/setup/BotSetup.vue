@@ -32,7 +32,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { useStore } from '../../store'
+import { useStore } from '@/store'
 import setupRegions from '@/services/setupRegions'
 import DifficultyLevel from '@/services/enum/DifficultyLevel'
 
