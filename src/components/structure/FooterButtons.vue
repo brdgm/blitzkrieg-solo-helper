@@ -56,7 +56,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .end-game-buttons {
-  position: absolute;
+  position: fixed;
   right: 0;
   bottom: 0;
   z-index: 5000;
