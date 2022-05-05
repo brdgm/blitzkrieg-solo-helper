@@ -16,14 +16,14 @@ describe('setupRegions', () => {
 
     // 3 rolls with 1 step each
     expect(stepsTotal).to.equal(3);
-  }),
+  })
 
   it('Level: Medium', () => {
     const stepsTotal = executeBotRegionSetup(DifficultyLevel.MEDIUM)
 
     // 3 rolls with 2 step each
     expect(stepsTotal).to.equal(6);
-  }),
+  })
 
   it('Level: Hard', () => {
     const stepsTotal = executeBotRegionSetup(DifficultyLevel.HARD)

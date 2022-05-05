@@ -7,7 +7,7 @@ describe('rollDice', () => {
 
     expect(value).greaterThanOrEqual(1)
     expect(value).lessThanOrEqual(6)
-  }),
+  })
 
   it('D20', () => {
     const value = rollDice(20)

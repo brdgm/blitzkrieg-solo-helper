@@ -8,7 +8,7 @@ describe('randomEnum', () => {
     const value = randomEnum(DifficultyLevel)
 
     expect(value).not.undefined
-  }),
+  })
 
   it('string enum', () => {
     const value = randomEnum(Stratagem)
