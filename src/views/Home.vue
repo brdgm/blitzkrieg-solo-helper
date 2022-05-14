@@ -4,6 +4,9 @@
     <a href="https://boardgamegeek.com/boardgame/258210/blitzkrieg-world-war-two-20-minutes" target="_blank">
       <img src="@/assets/game.jpg" class="rounded shadow w-100"/>
     </a>
+    <p class="mt-3">
+      Tabletopia: <a href="https://tabletopia.com/games/blitzkrieg-nippon" target="_blank">Blitzkrieg!</a>
+    </p>
   </div>
 
   <h1>{{t('home.title')}}</h1>
