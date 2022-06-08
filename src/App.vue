@@ -1,5 +1,5 @@
 <template>
-  <Header/>
+  <Header :title="t('gameTitle')" @set-locale="setLocale($event.language)"/>
 
   <div id="content-container" class="container-fluid mt-5 mb-5">
     <router-view :key="$route.fullPath"/>
@@ -12,7 +12,7 @@
 import { defineComponent, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useStore } from '@/store'
-import Header from '@/components/structure/Header.vue'
+import Header from 'brdgm-commons/src/components/structure/Header.vue'
 import Footer from '@/components/structure/Footer.vue'
 
 export default defineComponent({
@@ -33,9 +33,13 @@ export default defineComponent({
     
     const baseFontSize = ref(store.state.baseFontSize)
 
-    return { t, store, baseFontSize }
+    return { t, locale, store, baseFontSize }
   },
   methods: {
+    setLocale(lang: string) {
+      this.store.commit('language', lang)
+      this.locale = lang;
+    },
     zoomFontSize(payload: { baseFontSize: number }) {
       this.baseFontSize = payload.baseFontSize
       this.store.commit('zoomFontSize', this.baseFontSize)
