@@ -150,7 +150,7 @@ import { useStore } from '@/store'
 import { useRoute } from 'vue-router'
 import nextStratagem from '@/services/nextStratagem'
 import Stratagem from '@/services/enum/Stratagem'
-import rollDice from 'brdgm-commons/src/util/rollDice'
+import rollDice from 'brdgm-commons/src/util/random/rollDice'
 
 export default defineComponent({
   name: 'Stratagem',
