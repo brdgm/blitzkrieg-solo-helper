@@ -5,7 +5,45 @@
     <router-view :key="$route.fullPath"/>
   </div>
 
-  <Footer @zoomFontSize="zoomFontSize"/>
+  <Footer :build-number="buildNumber" :credits-label="t('footer.credits')" credits-modal-id="creditsModal" zoom-enabled @zoomFontSize="zoomFontSize"/>
+
+  <div class="modal" id="creditsModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">{{t('footer.credits')}}</h5>
+          <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h4><a href="https://boardgamegeek.com/boardgame/258210/blitzkrieg-world-war-two-20-minutes" target="_blank">{{t('gameTitle')}}</a></h4>
+          <dl>
+            <dt>Game design</dt>
+            <dd>Paolo Mori</dd>
+            <dt>Solo mode design</dt>
+            <dd>Dávid Turczi</dd>
+            <dt>Development and testing</dt>
+            <dd>Nick Shaw</dd>
+            <dt>Graphic design</dt>
+            <dd>Nick Avallone</dd>
+            <dt>Publisher</dt>
+            <dd><a href="https://www.pscgames.co.uk/" target="_blank">PSC Games</a></dd>
+          </dl>
+          <h4 class="border-top pt-3">{{appTitle}}</h4>
+          <dl>
+            <dt>Application Development</dt>
+            <dd>Stefan Seifert</dd>
+            <dt>Version</dt>
+            <dd>{{buildNumber}}</dd>
+            <dt>Source Code (Apache-2.0 License)</dt>
+            <dd><a href="https://github.com/brdgm/blitzkrieg-solo-helper" target="_blank">https://github.com/brdgm/blitzkrieg-solo-helper</a></dd>
+          </dl>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">{{t('action.close')}}</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script lang="ts">
@@ -13,13 +51,19 @@ import { defineComponent, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useStore } from '@/store'
 import Header from 'brdgm-commons/src/components/structure/Header.vue'
-import Footer from '@/components/structure/Footer.vue'
+import Footer from 'brdgm-commons/src/components/structure/Footer.vue'
 
 export default defineComponent({
   name: 'App',
   components: {
     Header,
     Footer
+  },
+  data() {
+    return {
+      buildNumber: process.env.VUE_APP_BUILD_NUMBER || '',
+      appTitle: process.env.VUE_APP_TITLE
+    }
   },
   setup() {
     const { t, locale } = useI18n({
