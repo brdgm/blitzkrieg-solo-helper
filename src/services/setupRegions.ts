@@ -1,7 +1,7 @@
 import DifficultyLevel from "./enum/DifficultyLevel";
 import Region from "./enum/Region";
 import RegionSteps from "./RegionSteps";
-import randomEnum from "@/util/randomEnum";
+import randomEnum from "brdgm-commons/src/util/randomEnum";
 
 /**
  * Randomly picks a number of regions and advances the marker steps
