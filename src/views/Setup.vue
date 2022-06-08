@@ -22,7 +22,7 @@
     <router-link to="/round/1" class="btn btn-primary btn-lg mt-3">
       {{t('action.startGame')}}
     </router-link>
-    <FooterButtons endGameButtonType="abortGame"/>
+    <FooterButtons :endGameLabel="t('action.abortGame')" :endGameConfirmMessage="t('action.abortGameConfirm')" :cancelLabel="t('action.cancel')" @endGame="endGame" />
   </div>
 
 </template>
@@ -30,8 +30,9 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { useStore } from '@/store'
 import BotSetup from '@/components/setup/BotSetup.vue'
-import FooterButtons from '@/components/structure/FooterButtons.vue'
+import FooterButtons from 'brdgm-commons/src/components/structure/FooterButtons.vue'
 
 export default defineComponent({
   name: 'Setup',
@@ -41,8 +42,15 @@ export default defineComponent({
   },
   setup() {
     const { t } = useI18n()
-    return { t }
+    const store = useStore()
+    return { t, store }
   },
+  methods: {
+    endGame() {
+      this.store.commit('endGame')
+      this.$router.push("/")
+    }
+  }
 })
 </script>
 
