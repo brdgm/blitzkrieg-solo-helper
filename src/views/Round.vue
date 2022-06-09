@@ -27,12 +27,12 @@ export default defineComponent({
   },
   setup() {
     const { t } = useI18n()
-    const store = useStore()
+    useStore()
     const route = useRoute()
 
     const round = parseInt(route.params['round'] as string)
 
-    return { t, store, round }
+    return { t, round }
   },
   computed: {
     backButtonRouteTo() : string {
@@ -41,7 +41,7 @@ export default defineComponent({
   },
   methods: {
     endGame() {
-      this.store.commit('endGame')
+      this.$store.commit('endGame')
       this.$router.push("/")
     }
   }

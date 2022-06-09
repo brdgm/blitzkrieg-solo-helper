@@ -77,16 +77,16 @@ export default defineComponent({
     
     const baseFontSize = ref(store.state.baseFontSize)
 
-    return { t, locale, store, baseFontSize }
+    return { t, locale, baseFontSize }
   },
   methods: {
     setLocale(lang: string) {
-      this.store.commit('language', lang)
+      this.$store.commit('language', lang)
       this.locale = lang;
     },
     zoomFontSize(payload: { baseFontSize: number }) {
       this.baseFontSize = payload.baseFontSize
-      this.store.commit('zoomFontSize', this.baseFontSize)
+      this.$store.commit('zoomFontSize', this.baseFontSize)
     }
   }
 })
