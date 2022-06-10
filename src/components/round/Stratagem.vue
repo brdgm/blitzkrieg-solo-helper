@@ -150,7 +150,7 @@ import { useStore } from '@/store'
 import { useRoute } from 'vue-router'
 import nextStratagem from '@/services/nextStratagem'
 import Stratagem from '@/services/enum/Stratagem'
-import rollDice from '@/util/rollDice'
+import rollDice from 'brdgm-commons/src/util/random/rollDice'
 
 export default defineComponent({
   name: 'Stratagem',
@@ -187,7 +187,7 @@ export default defineComponent({
     const images = require.context('@/assets/stratagem', false, /\.png$/)
     const stratagemImageUrl = images('./' + stratagem + '.png')
 
-    return { t, store, round, stratagem, unitRoll, steamroll, stratagemImageUrl }
+    return { t, round, stratagem, unitRoll, steamroll, stratagemImageUrl }
   }
 })
 </script>
