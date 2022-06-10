@@ -175,7 +175,7 @@ export default defineComponent({
     }
 
     // check for steamroll
-    var steamroll = (stratagem == Stratagem.STEAMROLL)
+    const steamroll = (stratagem == Stratagem.STEAMROLL)
     if (steamroll) {
       const previousRound = store.state.rounds.find(r => r.round==round-1)
       if (previousRound) {
