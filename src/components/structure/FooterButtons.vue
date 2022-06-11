@@ -1,39 +1,23 @@
 <template>
-  <div class="end-game-buttons">
-    <router-link v-if="backButtonRouteTo" :to="backButtonRouteTo" class="btn btn-secondary btn-sm me-2">{{t('action.back')}}</router-link>
-    <button v-if="endGameButtonType" class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#endGameModal">{{t('action.' + endGameButtonType)}}</button>
-  </div>
-
-  <div v-if="endGameButtonType" class="modal" id="endGameModal" tabindex="-1">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">{{t('action.' + endGameButtonType)}}</h5>
-          <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <p>{{t('action.' + endGameButtonType + 'Confirm')}}</p>
-        </div>
-        <div class="modal-footer">
-          <button class="btn btn-danger" @click="endGame" data-bs-dismiss="modal">{{t('action.' + endGameButtonType)}}</button>
-          <button class="btn btn-secondary" data-bs-dismiss="modal">{{t('action.cancel')}}</button>
-        </div>
-      </div>
-    </div>
-  </div>
+  <CommonsFooterButtons :backLabel="t('action.back')" :backButtonRouteTo="backButtonRouteTo"
+        :endGameLabel="t('action.'+endGameButtonType)" :endGameConfirmMessage="t('action.'+endGameButtonType+'Confirm')" :cancelLabel="t('action.cancel')" @endGame="endGame" />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useStore } from '@/store'
+import CommonsFooterButtons from 'brdgm-commons/src/components/structure/FooterButtons.vue'
 
 export default defineComponent({
   name: 'FooterButtons',
+  components: {
+    CommonsFooterButtons
+  },
   setup() {
     const { t } = useI18n()
-    const store = useStore()
-    return { t, store }
+    useStore()
+    return { t }
   },
   props: {
     endGameButtonType: {
@@ -47,18 +31,9 @@ export default defineComponent({
   },
   methods: {
     endGame() {
-      this.store.commit('endGame')
+      this.$store.commit('endGame')
       this.$router.push("/")
     }
   }
 })
 </script>
-
-<style lang="scss" scoped>
-.end-game-buttons {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  z-index: 5000;
-}
-</style>

@@ -76,7 +76,7 @@ export const store = createStore<State>({
   }
 })
 
-store.subscribe((mutation, state) => {
+store.subscribe((_mutation, state) => {
 	// store state asJSON string in local storage
 	localStorage.setItem(LOCALSTORAGE_KEY, JSON.stringify(state));
 })

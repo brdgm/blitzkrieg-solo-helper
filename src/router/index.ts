@@ -40,7 +40,7 @@ router.afterEach(to => {
 })
 // redirect to lase used route path
 let isFirstTransition = true
-router.beforeEach((to, from, next) => {
+router.beforeEach((to, _from, next) => {
   const lastRouteFullPath = localStorage.getItem(LOCALSTORAGE_KEY)
   if (to.name === "Home" && lastRouteFullPath && isFirstTransition) next(lastRouteFullPath)
   else next()

@@ -46,7 +46,7 @@ export default defineComponent({
       store.commit('setupRegions', setupRegions(store.state.setup.difficultyLevel))
     }
 
-    return { t, store }
+    return { t }
   },
   data() {
     return {
@@ -58,7 +58,7 @@ export default defineComponent({
     setDifficulty(level: DifficultyLevel) {
       this.difficultyLevel = level
       this.regions = setupRegions(level)
-      this.store.commit('setup', { difficultyLevel: this.difficultyLevel, regions: this.regions })
+      this.$store.commit('setup', { difficultyLevel: this.difficultyLevel, regions: this.regions })
     },
     reroll() {
       this.setDifficulty(this.difficultyLevel)
