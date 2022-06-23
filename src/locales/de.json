@@ -92,7 +92,7 @@
   },
   "home": {
     "title": "Winziger Weltkrieg Solo Helper",
-    "play1": "Spiele den <b>Solo-Modus</b> von <a href='https://boardgamegeek.com/boardgame/258210/blitzkrieg-world-war-two-20-minutes' target='_blank'><b>Winziger Weltkrieg / Blitzkrieg!</b></a>",
+    "play1": "Spiele den <b>Solo-Modus</b> von <a href='https://boardgamegeek.com/boardgame/258210/blitzkrieg-world-war-two-20-minutes' target='_blank' rel='noopener'><b>Winziger Weltkrieg / Blitzkrieg!</b></a>",
     "play2": "Um den Solo-Modus zu spielen, benötigst du nur das Basisspiel. Diese Applikation ersetzt alle Solo-Komponenten.",
     "feedback": "Diskussion und Feedback:"
   },
