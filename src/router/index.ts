@@ -1,7 +1,7 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
-import Home from '@/views/Home.vue'
-import Setup from '@/views/Setup.vue'
-import Round from '@/views/Round.vue'
+import AppHome from '@/views/AppHome.vue'
+import SetupGame from '@/views/SetupGame.vue'
+import RoundTurn from '@/views/RoundTurn.vue'
 import NotFound from '@/views/NotFound.vue'
 
 const LOCALSTORAGE_KEY = process.env.VUE_APP_LOCALSTORAGE_KEY_PREFIX + "route"
@@ -9,18 +9,18 @@ const LOCALSTORAGE_KEY = process.env.VUE_APP_LOCALSTORAGE_KEY_PREFIX + "route"
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'AppHome',
+    component: AppHome
   },
   {
     path: '/setup',
-    name: 'Setup',
-    component: Setup
+    name: 'SetupGame',
+    component: SetupGame
   },
   {
     path: '/round/:round',
-    name: 'Round',
-    component: Round
+    name: 'RoundTurn',
+    component: RoundTurn
   },
   {
     path: '/:pathMatch(.*)*',

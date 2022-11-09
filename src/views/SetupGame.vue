@@ -34,7 +34,7 @@ import BotSetup from '@/components/setup/BotSetup.vue'
 import FooterButtons from '@/components/structure/FooterButtons.vue'
 
 export default defineComponent({
-  name: 'Setup',
+  name: 'SetupGame',
   components: {
     BotSetup,
     FooterButtons
