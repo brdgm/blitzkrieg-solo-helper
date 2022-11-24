@@ -153,7 +153,7 @@ import Stratagem from '@/services/enum/Stratagem'
 import rollDice from 'brdgm-commons/src/util/random/rollDice'
 
 export default defineComponent({
-  name: 'Stratagem',
+  name: 'BotStratagem',
   setup() {
     const { t } = useI18n()
     const store = useStore()
@@ -162,8 +162,8 @@ export default defineComponent({
     const round = parseInt(route.params['round'] as string)
     const currentRound = store.state.rounds.find(r => r.round==round)
 
-    var stratagem
-    var unitRoll
+    let stratagem
+    let unitRoll
     if (currentRound) {
       stratagem = currentRound.stratagem
       unitRoll = currentRound.unitRoll
@@ -195,6 +195,7 @@ export default defineComponent({
 <style lang="scss" scoped>
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/variables";
+@import "bootstrap/scss/maps";
 @import "bootstrap/scss/utilities";
 @import "bootstrap/scss/mixins";
 @import "bootstrap/scss/grid";

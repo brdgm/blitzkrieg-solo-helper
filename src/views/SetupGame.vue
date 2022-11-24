@@ -34,7 +34,7 @@ import BotSetup from '@/components/setup/BotSetup.vue'
 import FooterButtons from '@/components/structure/FooterButtons.vue'
 
 export default defineComponent({
-  name: 'Setup',
+  name: 'SetupGame',
   components: {
     BotSetup,
     FooterButtons
@@ -49,6 +49,7 @@ export default defineComponent({
 <style lang="scss" scoped>
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/variables";
+@import "bootstrap/scss/maps";
 @import "bootstrap/scss/utilities";
 .player-icon {
   height: $h3-font-size;

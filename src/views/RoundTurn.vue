@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Stratagem/>
+    <BotStratagem/>
 
     <router-link :to="'/round/' + (round+1)" class="btn btn-primary btn-lg mt-3">
       {{t('action.nextRound')}}
@@ -15,13 +15,13 @@ import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRoute } from 'vue-router'
 import FooterButtons from '@/components/structure/FooterButtons.vue'
-import Stratagem from '@/components/round/Stratagem.vue'
+import BotStratagem from '@/components/round/BotStratagem.vue'
 
 export default defineComponent({
-  name: 'Round',
+  name: 'RoundTurn',
   components: {
     FooterButtons,
-    Stratagem
+    BotStratagem
   },
   setup() {
     const { t } = useI18n()
