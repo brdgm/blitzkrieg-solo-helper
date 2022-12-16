@@ -6,7 +6,7 @@ import randomEnum from "brdgm-commons/src/util/random/randomEnum";
 /**
  * Randomly picks a number of regions and advances the marker steps
  * on each depending on difficulty level.
- * @param level Difficutly level
+ * @param level Difficulty level
  * @returns Steps to advance in selected regions
  */
 export default function(level: DifficultyLevel) : RegionSteps[] {
