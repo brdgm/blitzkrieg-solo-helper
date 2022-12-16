@@ -7,43 +7,42 @@
 
   <AppFooter :build-number="buildNumber" :credits-label="t('footer.credits')" credits-modal-id="creditsModal" zoom-enabled @zoomFontSize="zoomFontSize"/>
 
-  <div class="modal" id="creditsModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">{{t('footer.credits')}}</h5>
-          <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <h4><a href="https://boardgamegeek.com/boardgame/258210/blitzkrieg-world-war-two-20-minutes" target="_blank" rel="noopener">{{t('gameTitle')}}</a></h4>
-          <dl>
-            <dt>Game design</dt>
-            <dd>Paolo Mori</dd>
-            <dt>Solo mode design</dt>
-            <dd>Dávid Turczi</dd>
-            <dt>Development and testing</dt>
-            <dd>Nick Shaw</dd>
-            <dt>Graphic design</dt>
-            <dd>Nick Avallone</dd>
-            <dt>Publisher</dt>
-            <dd><a href="https://www.pscgames.co.uk/" target="_blank" rel="noopener">PSC Games</a></dd>
-          </dl>
-          <h4 class="border-top pt-3">{{appTitle}}</h4>
-          <dl>
-            <dt>Application Development</dt>
-            <dd>Stefan Seifert</dd>
-            <dt>Version</dt>
-            <dd>{{buildNumber}}</dd>
-            <dt>Source Code (Apache-2.0 License)</dt>
-            <dd><a href="https://github.com/brdgm/blitzkrieg-solo-helper" target="_blank" rel="noopener">https://github.com/brdgm/blitzkrieg-solo-helper</a></dd>
-          </dl>
-        </div>
-        <div class="modal-footer">
-          <button class="btn btn-secondary" data-bs-dismiss="modal">{{t('action.close')}}</button>
-        </div>
-      </div>
-    </div>
-  </div>
+  <ModalDialog id="serviceWorkerUpdatedRefresh" :title="t('serviceWorkerUpdatedRefresh.title')">
+    <template #body>
+      <p v-html="t('serviceWorkerUpdatedRefresh.notice')"></p>
+    </template>
+    <template #footer>
+      <button class="btn btn-primary" data-bs-dismiss="modal" @click="$router.go(0)">{{t('serviceWorkerUpdatedRefresh.title')}}</button>
+      <button class="btn btn-secondary" data-bs-dismiss="modal">{{t('action.close')}}</button>
+    </template>
+  </ModalDialog>
+
+  <ModalDialog id="creditsModal" :title="t('footer.credits')">
+    <template #body>
+      <h4><a href="https://boardgamegeek.com/boardgame/258210/blitzkrieg-world-war-two-20-minutes" target="_blank" rel="noopener">{{t('gameTitle')}}</a></h4>
+      <dl>
+        <dt>Game design</dt>
+        <dd>Paolo Mori</dd>
+        <dt>Solo mode design</dt>
+        <dd>Dávid Turczi</dd>
+        <dt>Development and testing</dt>
+        <dd>Nick Shaw</dd>
+        <dt>Graphic design</dt>
+        <dd>Nick Avallone</dd>
+        <dt>Publisher</dt>
+        <dd><a href="https://www.pscgames.co.uk/" target="_blank" rel="noopener">PSC Games</a></dd>
+      </dl>
+      <h4 class="border-top pt-3">{{appTitle}}</h4>
+      <dl>
+        <dt>Application Development</dt>
+        <dd>Stefan Seifert</dd>
+        <dt>Version</dt>
+        <dd>{{buildNumber}}</dd>
+        <dt>Source Code (Apache-2.0 License)</dt>
+        <dd><a href="https://github.com/brdgm/blitzkrieg-solo-helper" target="_blank" rel="noopener">https://github.com/brdgm/blitzkrieg-solo-helper</a></dd>
+      </dl>
+    </template>
+  </ModalDialog>
 </template>
 
 <script lang="ts">
@@ -52,12 +51,14 @@ import { useI18n } from 'vue-i18n'
 import { useStore } from '@/store'
 import AppHeader from 'brdgm-commons/src/components/structure/AppHeader.vue'
 import AppFooter from 'brdgm-commons/src/components/structure/AppFooter.vue'
+import ModalDialog from 'brdgm-commons/src/components/structure/ModalDialog.vue'
 
 export default defineComponent({
   name: 'App',
   components: {
     AppHeader,
-    AppFooter
+    AppFooter,
+    ModalDialog
   },
   data() {
     return {

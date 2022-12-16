@@ -14,59 +14,37 @@
       <abbr :title="t('info.greatestChange.title')" data-bs-toggle="modal" data-bs-target="#effectsModal">{{t('info.effects.title')}}</abbr><br/>
     </div>
 
-    <div class="modal" id="greatestChangeModal" tabindex="-1">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">{{t('info.greatestChange.title')}}</h5>
-            <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <ol>
-              <li v-html="t('info.greatestChange.prio1')"></li>
-              <li v-html="t('info.greatestChange.prio2')"></li>
-              <li v-html="t('info.greatestChange.prio3')"></li>
-              <li v-html="t('info.greatestChange.prio4')"></li>
-              <li v-html="t('info.greatestChange.prio5')"></li>
-              <li v-html="t('info.greatestChange.prio6')"></li>
-              <li v-html="t('info.greatestChange.prio7')"></li>
-            </ol>
-          </div>
-          <div class="modal-footer">
-            <button class="btn btn-secondary" data-bs-dismiss="modal">{{t('action.close')}}</button>
-          </div>
-        </div>
-      </div>
-    </div>
+    <ModalDialog id="greatestChangeModal" :title="t('info.greatestChange.title')">
+      <template #body>
+        <ol>
+          <li v-html="t('info.greatestChange.prio1')"></li>
+          <li v-html="t('info.greatestChange.prio2')"></li>
+          <li v-html="t('info.greatestChange.prio3')"></li>
+          <li v-html="t('info.greatestChange.prio4')"></li>
+          <li v-html="t('info.greatestChange.prio5')"></li>
+          <li v-html="t('info.greatestChange.prio6')"></li>
+          <li v-html="t('info.greatestChange.prio7')"></li>
+        </ol>
+      </template>
+    </ModalDialog>
 
-    <div class="modal" id="effectsModal" tabindex="-1">
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">{{t('info.effects.title')}}</h5>
-            <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <ul>
-              <li v-html="t('info.effects.info1')"></li>
-              <li v-html="t('info.effects.info2')"></li>
-              <li v-html="t('info.effects.info3')"></li>
-              <li v-html="t('info.effects.info4')"></li>
-              <li v-html="t('info.effects.info5')"></li>
-              <li v-html="t('info.effects.info6')"></li>
-              <li v-html="t('info.effects.info7')"></li>
-              <li v-html="t('info.effects.info8')"></li>
-              <li v-html="t('info.effects.info9')"></li>
-            </ul>
-          </div>
-          <div class="modal-footer">
-            <button class="btn btn-secondary" data-bs-dismiss="modal">{{t('action.close')}}</button>
-          </div>
-        </div>
-      </div>
-    </div>
+    <ModalDialog id="effectsModal" :title="t('info.effects.title')">
+      <template #body>
+        <ul>
+          <li v-html="t('info.effects.info1')"></li>
+          <li v-html="t('info.effects.info2')"></li>
+          <li v-html="t('info.effects.info3')"></li>
+          <li v-html="t('info.effects.info4')"></li>
+          <li v-html="t('info.effects.info5')"></li>
+          <li v-html="t('info.effects.info6')"></li>
+          <li v-html="t('info.effects.info7')"></li>
+          <li v-html="t('info.effects.info8')"></li>
+          <li v-html="t('info.effects.info9')"></li>
+        </ul>
+      </template>
+    </ModalDialog>
   </div>
-  
+
   <h3>{{t('theatre.title')}}</h3>
   <ol>
     <li v-html="t('theatre.prio1')"></li>
@@ -151,9 +129,13 @@ import { useRoute } from 'vue-router'
 import nextStratagem from '@/services/nextStratagem'
 import Stratagem from '@/services/enum/Stratagem'
 import rollDice from 'brdgm-commons/src/util/random/rollDice'
+import ModalDialog from 'brdgm-commons/src/components/structure/ModalDialog.vue'
 
 export default defineComponent({
   name: 'BotStratagem',
+  components: {
+    ModalDialog
+  },
   setup() {
     const { t } = useI18n()
     const store = useStore()

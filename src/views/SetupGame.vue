@@ -19,9 +19,9 @@
       </div>
     </div>
 
-    <router-link to="/round/1" class="btn btn-primary btn-lg mt-3">
+    <button class="btn btn-primary btn-lg mt-3" @click="startGame">
       {{t('action.startGame')}}
-    </router-link>
+    </button>
     <FooterButtons endGameButtonType="abortGame"/>
   </div>
 
@@ -43,6 +43,12 @@ export default defineComponent({
     const { t } = useI18n()
     return { t }
   },
+  methods: {
+    startGame() : void {
+      this.$store.commit('resetGame')
+      this.$router.push('/round/1')
+    }
+  }
 })
 </script>
 

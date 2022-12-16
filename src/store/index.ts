@@ -66,7 +66,7 @@ export const store = createStore<State>({
       }
       state.rounds.push(round)
     },
-    endGame(state : State) {
+    resetGame(state : State) {
       state.setup.regions = []
       state.rounds = []
     },
