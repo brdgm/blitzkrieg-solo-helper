@@ -26,6 +26,7 @@
     This is not an official PSC Games product and has no affiliation with <a href="https://www.pscgames.co.uk/" target="_blank" rel="noopener">PSC Games</a>.
     All art in this app is from <a href="https://www.pscgames.co.uk/games/blitzkrieg" target="_blank" rel="noopener">Blitzkrieg!</a>.
     See <a href="#" data-bs-toggle="modal" data-bs-target="#creditsModal">{{t('footer.credits')}}</a>.
+    <a href="https://ko-fi.com/brdgm_me" target="_blank"><img class="kofi-button" src="@/assets/kofi_button_dark.png"/></a>
   </p>
 
 </template>
@@ -48,5 +49,8 @@ export default defineComponent({
   clear: both;
   margin-top: 4rem;
   font-size: smaller;
+}
+.kofi-button {
+  height: 1.4rem;
 }
 </style>
