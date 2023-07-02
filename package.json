@@ -3,6 +3,7 @@
   "version": "1.1.11",
   "private": true,
   "description": "Blitzkrieg! Solo Helper",
+  "appDeployName": "blitzkrieg",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
