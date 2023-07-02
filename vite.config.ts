@@ -13,6 +13,7 @@ export default defineConfig({
     vue(),
     VitePWA({
       registerType: 'prompt',
+      manifestFilename: 'manifest.json',
       includeAssets: [
         'adaptto-favicon.svg',
         'favicon.ico',
