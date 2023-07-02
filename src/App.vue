@@ -12,7 +12,7 @@
       <p v-html="t('serviceWorkerUpdatedRefresh.notice')"></p>
     </template>
     <template #footer>
-      <button class="btn btn-primary" data-bs-dismiss="modal" @click="$router.go(0)">{{t('serviceWorkerUpdatedRefresh.title')}}</button>
+      <button class="btn btn-primary" data-bs-dismiss="modal" @click="updateServiceWorker()">{{t('serviceWorkerUpdatedRefresh.title')}}</button>
       <button class="btn btn-secondary" data-bs-dismiss="modal">{{t('action.close')}}</button>
     </template>
   </ModalDialog>
@@ -79,7 +79,7 @@ export default defineComponent({
     // PWA refresh
     const updateServiceWorker = registerSW({
       onNeedRefresh() {
-        showModalIfExist('serviceWorkerOnNeedRefreshModal')
+        showModalIfExist('serviceWorkerUpdatedRefresh')
       }
     })
 
@@ -88,7 +88,7 @@ export default defineComponent({
     
     const baseFontSize = ref(store.state.baseFontSize)
 
-    return { t, locale, baseFontSize }
+    return { t, locale, baseFontSize, updateServiceWorker }
   },
   methods: {
     setLocale(lang: string) {
