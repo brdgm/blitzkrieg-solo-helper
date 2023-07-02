@@ -14,6 +14,7 @@ export default defineConfig({
     VitePWA({
       registerType: 'prompt',
       manifestFilename: 'manifest.json',
+      filename: 'service-worker.js',
       includeAssets: [
         'adaptto-favicon.svg',
         'favicon.ico',

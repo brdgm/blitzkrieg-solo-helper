@@ -53,6 +53,8 @@ import AppHeader from 'brdgm-commons/src/components/structure/AppHeader.vue'
 import AppFooter from 'brdgm-commons/src/components/structure/AppFooter.vue'
 import ModalDialog from 'brdgm-commons/src/components/structure/ModalDialog.vue'
 import { version, description } from '@/../package.json'
+import { registerSW } from 'virtual:pwa-register'
+import showModalIfExist from 'brdgm-commons/src/util/modal/showModal'
 
 export default defineComponent({
   name: 'App',
@@ -73,6 +75,13 @@ export default defineComponent({
       useScope: 'global'
     })
     const store = useStore()
+
+    // PWA refresh
+    const updateServiceWorker = registerSW({
+      onNeedRefresh() {
+        showModalIfExist('serviceWorkerOnNeedRefreshModal')
+      }
+    })
 
     store.commit('initialiseStore')
     locale.value = store.state.language
