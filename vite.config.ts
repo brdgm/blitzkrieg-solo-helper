@@ -15,8 +15,8 @@ export default defineConfig({
       includeAssets: [
         'adaptto-favicon.svg',
         'favicon.ico',
-        'apple-touch-icon-180x180.png',
-        'maskable-icon-512x512.png'
+        'img/apple-touch-icon-180x180.png',
+        'img/maskable-icon-512x512.png'
       ],
       manifest: {
         name: description,
@@ -25,17 +25,17 @@ export default defineConfig({
         theme_color: '#333',
         icons: [
           {
-            src: 'pwa-64x64.png',
+            src: 'img/pwa-64x64.png',
             sizes: '64x64',
             type: 'image/png'
           },
           {
-            src: 'pwa-192x192.png',
+            src: 'img/pwa-192x192.png',
             sizes: '192x192',
             type: 'image/png'
           },
           {
-            src: 'pwa-512x512.png',
+            src: 'img/pwa-512x512.png',
             sizes: '512x512',
             type: 'image/png'
           }
