@@ -3,13 +3,13 @@ import { Preset, defineConfig } from '@vite-pwa/assets-generator/config'
 const minimalPreset: Preset = {
   transparent: {
     sizes: [64, 192, 512],
-    favicons: [[64, 'favicon.svg']]
+    favicons: [[64, 'favicon.ico']]
   },
   maskable: {
     sizes: [512]
   },
   apple: {
-    sizes: [180],
+    sizes: [60,76,120,152,180],
     padding: 0
   }
 }
@@ -17,6 +17,6 @@ const minimalPreset: Preset = {
 export default defineConfig({
   preset: minimalPreset,
   images: [
-    'public/img/blitzkrieg-icon.png'
+    'public/img/icons/blitzkrieg-icon.png'
   ]
 })
