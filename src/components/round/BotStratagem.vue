@@ -166,8 +166,7 @@ export default defineComponent({
     }
 
     // dynamic stratagem image
-    const images = require.context('@/assets/stratagem', false, /\.png$/)
-    const stratagemImageUrl = images('./' + stratagem + '.png')
+    const stratagemImageUrl = new URL(`/src/assets/stratagem/${stratagem}.png`, import.meta.url).toString()
 
     return { t, round, stratagem, unitRoll, steamroll, stratagemImageUrl }
   }
@@ -177,6 +176,7 @@ export default defineComponent({
 <style lang="scss" scoped>
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
 @import "bootstrap/scss/maps";
 @import "bootstrap/scss/utilities";
 @import "bootstrap/scss/mixins";
