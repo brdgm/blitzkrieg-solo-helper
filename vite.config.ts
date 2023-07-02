@@ -12,7 +12,7 @@ export default defineConfig({
     vue(),
     VitePWA({
       registerType: 'prompt',
-      base: '/blitzkrieg',
+      base: '/blitzkrieg/',
       includeAssets: [
         'adaptto-favicon.svg',
         'favicon.ico',
