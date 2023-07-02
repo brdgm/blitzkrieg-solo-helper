@@ -8,11 +8,11 @@ import { description } from './package.json'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/blitzkrieg/',
   plugins: [
     vue(),
     VitePWA({
       registerType: 'prompt',
-      base: '/blitzkrieg/',
       includeAssets: [
         'adaptto-favicon.svg',
         'favicon.ico',
