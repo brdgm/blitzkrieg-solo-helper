@@ -17,6 +17,6 @@ const minimalPreset: Preset = {
 export default defineConfig({
   preset: minimalPreset,
   images: [
-    'public/img/icons/blitzkrieg-icon.png'
+    'public/img/icons/app-icon.png'
   ]
 })
