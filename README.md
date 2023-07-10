@@ -1,5 +1,6 @@
 # Blitzkrieg! Solo Helper
 
+[![Build](https://github.com/brdgm/blitzkrieg-solo-helper/workflows/Build/badge.svg?branch=develop)](https://github.com/brdgm/blitzkrieg-solo-helper/actions?query=workflow%3ABuild+branch%3Adevelop)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=brdgm_blitzkrieg-solo-helper&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=brdgm_blitzkrieg-solo-helper)
 
 
