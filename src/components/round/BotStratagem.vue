@@ -1,8 +1,8 @@
 <template>
   <h1>
     {{round}}:
-    <img v-if="steamroll" src="@/assets/stratagem/steamroll.png" class="stratagem-icon">
-    <img :src="stratagemImageUrl" class="stratagem-icon">
+    <img v-if="steamroll" src="@/assets/stratagem/steamroll.png" class="stratagem-icon" alt="">
+    <img :src="stratagemImageUrl" class="stratagem-icon" alt="">
     {{t('stratagem.'+stratagem)}}
   </h1>
 

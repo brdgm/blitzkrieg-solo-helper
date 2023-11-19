@@ -2,7 +2,7 @@
 
   <div class="float-end m-2 w-25">
     <a href="https://boardgamegeek.com/boardgame/258210/blitzkrieg-world-war-two-20-minutes" target="_blank" rel="noopener">
-      <img src="@/assets/game.jpg" class="rounded shadow w-100"/>
+      <img src="@/assets/game.jpg" class="rounded shadow w-100" alt=""/>
     </a>
     <p class="mt-3">
       Tabletopia: <a href="https://tabletopia.com/games/blitzkrieg-nippon" target="_blank" rel="noopener">Blitzkrieg!</a>
@@ -26,7 +26,7 @@
     This is not an official PSC Games product and has no affiliation with <a href="https://www.pscgames.co.uk/" target="_blank" rel="noopener">PSC Games</a>.
     All art in this app is from <a href="https://www.pscgames.co.uk/games/blitzkrieg" target="_blank" rel="noopener">Blitzkrieg!</a>.
     See <a href="#" data-bs-toggle="modal" data-bs-target="#creditsModal">{{t('footer.credits')}}</a>.
-    <a href="https://ko-fi.com/brdgm_me" target="_blank" rel="noopener"><img class="kofi-button" src="@/assets/kofi_button_dark.png"/></a>
+    <a href="https://ko-fi.com/brdgm_me" target="_blank" rel="noopener"><img class="kofi-button" src="@/assets/kofi_button_dark.png" alt="Support me on Ko-fi"/></a>
   </p>
 
 </template>
