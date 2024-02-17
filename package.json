@@ -1,6 +1,6 @@
 {
   "name": "@brdgm/blitzkrieg-solo-helper",
-  "version": "1.1.13",
+  "version": "1.1.14",
   "private": true,
   "description": "Blitzkrieg! Solo Helper",
   "appDeployName": "blitzkrieg",
@@ -18,7 +18,7 @@
   "dependencies": {
     "@popperjs/core": "~2.11.8",
     "bootstrap": "~5.3.2",
-    "brdgm-commons": "github:brdgm/brdgm-commons#1.5.0",
+    "brdgm-commons": "github:brdgm/brdgm-commons#1.6.0",
     "core-js": "~3.36.0",
     "lodash": "~4.17.21",
     "vue": "~3.4.19",
