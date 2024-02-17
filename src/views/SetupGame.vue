@@ -5,7 +5,7 @@
     <div class="row g-3">
       <div class="col-md-6">
         <div class="border border-5 p-3">
-          <h3>{{t('setup.you.title')}}: <img src="@/assets/player/allies.png" class="player-icon"/> {{t('setup.you.player')}}</h3>
+          <h3>{{t('setup.you.title')}}: <img src="@/assets/player/allies.png" class="player-icon" alt=""/> {{t('setup.you.player')}}</h3>
           <ol class="mt-3">
             <li v-html="t('setup.you.draw')"></li>
           </ol>
@@ -13,7 +13,7 @@
       </div>
       <div class="col-md-6">
         <div class="border border-5 p-3">
-          <h3>{{t('setup.bot.title')}}: <img src="@/assets/player/axis.png" class="player-icon"/> {{t('setup.bot.player')}}</h3>
+          <h3>{{t('setup.bot.title')}}: <img src="@/assets/player/axis.png" class="player-icon" alt=""/> {{t('setup.bot.player')}}</h3>
           <BotSetup/>
         </div>
       </div>

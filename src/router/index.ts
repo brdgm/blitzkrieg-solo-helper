@@ -6,6 +6,8 @@ import NotFound from '@/views/NotFound.vue'
 import createRouter from 'brdgm-commons/src/util/router/createRouter'
 import { name } from '@/../package.json'
 
+declare let _paq: any;  // eslint-disable-line @typescript-eslint/no-explicit-any
+
 const LOCALSTORAGE_KEY = `${name}.route`
 
 const routes: Array<RouteRecordRaw> = [
@@ -31,4 +33,11 @@ const routes: Array<RouteRecordRaw> = [
   }
 ]
 
-export default createRouter(routes, LOCALSTORAGE_KEY, 'AppHome')
+const router = createRouter(routes, LOCALSTORAGE_KEY, 'AppHome')
+router.afterEach(to => {
+  if (_paq) {
+    _paq.push(['setCustomUrl', to.fullPath]);
+    _paq.push(['trackPageView']);
+  }
+})
+export default router
