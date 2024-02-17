@@ -3,10 +3,8 @@ import AppHome from '@/views/AppHome.vue'
 import SetupGame from '@/views/SetupGame.vue'
 import RoundTurn from '@/views/RoundTurn.vue'
 import NotFound from '@/views/NotFound.vue'
-import createRouter from 'brdgm-commons/src/util/router/createRouter'
+import createRouterMatomoTracking from 'brdgm-commons/src/util/router/createRouterMatomoTracking'
 import { name, appDeployName } from '@/../package.json'
-
-declare let _paq: any;  // eslint-disable-line @typescript-eslint/no-explicit-any
 
 const LOCALSTORAGE_KEY = `${name}.route`
 
@@ -33,11 +31,4 @@ const routes: Array<RouteRecordRaw> = [
   }
 ]
 
-const router = createRouter(routes, LOCALSTORAGE_KEY, 'AppHome')
-router.afterEach(to => {
-  if (_paq) {
-    _paq.push(['setCustomUrl', `/${appDeployName}${to.fullPath}`]);
-    _paq.push(['trackPageView']);
-  }
-})
-export default router
+export default createRouterMatomoTracking(routes, LOCALSTORAGE_KEY, appDeployName, 'AppHome')
