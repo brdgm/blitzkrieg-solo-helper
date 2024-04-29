@@ -6,7 +6,7 @@ describe('nextStratagem', () => {
   it('First Round', () => {
     const stratagem = nextStratagem([], 1)
 
-    expect(stratagem).not.equal(Stratagem.STEAMROLL);
+    expect(stratagem).not.equal(Stratagem.STEAMROLL)
   })
 
   it('Second Round', () => {
@@ -14,7 +14,7 @@ describe('nextStratagem', () => {
       { round: 1, stratagem: Stratagem.BIG_GUNS, unitRoll: 1 }
     ], 2)
 
-    expect(stratagem).not.equal(Stratagem.BIG_GUNS);
+    expect(stratagem).not.equal(Stratagem.BIG_GUNS)
   })
 
   it('Third Round', () => {
@@ -23,7 +23,7 @@ describe('nextStratagem', () => {
       { round: 2, stratagem: Stratagem.SECURE, unitRoll: 1 }
     ], 3)
 
-    expect(stratagem).not.equal(Stratagem.SECURE);
+    expect(stratagem).not.equal(Stratagem.SECURE)
   })
 
   it('Third Round with more rounds', () => {
@@ -34,6 +34,6 @@ describe('nextStratagem', () => {
       { round: 4, stratagem: Stratagem.COUNTERATTACK, unitRoll: 1 }, 
     ], 3)
 
-    expect(stratagem).not.equal(Stratagem.SECURE);
+    expect(stratagem).not.equal(Stratagem.SECURE)
   })
 })

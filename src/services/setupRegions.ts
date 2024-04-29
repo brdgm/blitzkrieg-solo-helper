@@ -27,5 +27,5 @@ export default function(level: DifficultyLevel) : RegionSteps[] {
     }
   }
 
-  return result.sort((a,b) => a.region - b.region);
+  return result.sort((a,b) => a.region - b.region)
 }
