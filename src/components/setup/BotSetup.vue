@@ -30,9 +30,9 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { useStore } from '@/store'
+import { useStateStore } from '@/store/state'
 import setupRegions from '@/services/setupRegions'
 import DifficultyLevel from '@/services/enum/DifficultyLevel'
 
@@ -40,25 +40,22 @@ export default defineComponent({
   name: 'BotSetup',
   setup() {
     const { t } = useI18n()
-    const store = useStore()
+    const state = useStateStore()
 
-    if (store.state.setup.regions.length == 0) {
-      store.commit('setupRegions', setupRegions(store.state.setup.difficultyLevel))
+    if (state.setup.regions.length == 0) {
+      state.setup.regions = setupRegions(state.setup.difficultyLevel)
     }
 
-    return { t }
-  },
-  data() {
-    return {
-      difficultyLevel: this.$store.state.setup.difficultyLevel,
-      regions: this.$store.state.setup.regions
-    }
+    const difficultyLevel = ref(state.setup.difficultyLevel)
+    const regions = ref(state.setup.regions)
+
+    return { t, state, difficultyLevel, regions }
   },
   methods: {
     setDifficulty(level: DifficultyLevel) {
       this.difficultyLevel = level
       this.regions = setupRegions(level)
-      this.$store.commit('setup', { difficultyLevel: this.difficultyLevel, regions: this.regions })
+      this.state.setup = { difficultyLevel: this.difficultyLevel, regions: this.regions }
     },
     reroll() {
       this.setDifficulty(this.difficultyLevel)

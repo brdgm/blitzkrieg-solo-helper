@@ -124,7 +124,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { useStore } from '@/store'
+import { useStateStore } from '@/store/state'
 import { useRoute } from 'vue-router'
 import nextStratagem from '@/services/nextStratagem'
 import Stratagem from '@/services/enum/Stratagem'
@@ -138,11 +138,11 @@ export default defineComponent({
   },
   setup() {
     const { t } = useI18n()
-    const store = useStore()
+    const state = useStateStore()
     const route = useRoute()
 
     const round = parseInt(route.params['round'] as string)
-    const currentRound = store.state.rounds.find(r => r.round==round)
+    const currentRound = state.rounds.find(r => r.round==round)
 
     let stratagem
     let unitRoll
@@ -151,15 +151,15 @@ export default defineComponent({
       unitRoll = currentRound.unitRoll
     }
     else {
-      stratagem = nextStratagem(store.state.rounds, round)
+      stratagem = nextStratagem(state.rounds, round)
       unitRoll = rollDice(6)
-      store.commit('round', { round: round, stratagem: stratagem, unitRoll: unitRoll })
+      state.round({ round: round, stratagem: stratagem, unitRoll: unitRoll })
     }
 
     // check for steamroll
     const steamroll = (stratagem == Stratagem.STEAMROLL)
     if (steamroll) {
-      const previousRound = store.state.rounds.find(r => r.round==round-1)
+      const previousRound = state.rounds.find(r => r.round==round-1)
       if (previousRound) {
         stratagem = previousRound.stratagem
       }

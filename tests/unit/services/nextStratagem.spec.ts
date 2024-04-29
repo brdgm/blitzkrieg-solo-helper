@@ -1,5 +1,5 @@
-import Stratagem from '@/services/enum/Stratagem';
-import nextStratagem from '@/services/nextStratagem';
+import Stratagem from '@/services/enum/Stratagem'
+import nextStratagem from '@/services/nextStratagem'
 import { expect } from 'chai'
 
 describe('nextStratagem', () => {
