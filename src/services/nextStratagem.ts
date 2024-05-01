@@ -1,5 +1,5 @@
 import Stratagem from './enum/Stratagem'
-import randomEnum from 'brdgm-commons/src/util/random/randomEnum'
+import randomEnum from '@brdgm/brdgm-commons/src/util/random/randomEnum'
 import { Round } from '@/store/state'
 
 /**

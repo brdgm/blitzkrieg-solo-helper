@@ -128,8 +128,8 @@ import { useStateStore } from '@/store/state'
 import { useRoute } from 'vue-router'
 import nextStratagem from '@/services/nextStratagem'
 import Stratagem from '@/services/enum/Stratagem'
-import rollDice from 'brdgm-commons/src/util/random/rollDice'
-import ModalDialog from 'brdgm-commons/src/components/structure/ModalDialog.vue'
+import rollDice from '@brdgm/brdgm-commons/src/util/random/rollDice'
+import ModalDialog from '@brdgm/brdgm-commons/src/components/structure/ModalDialog.vue'
 
 export default defineComponent({
   name: 'BotStratagem',

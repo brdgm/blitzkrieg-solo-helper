@@ -3,7 +3,7 @@ import AppHome from '@/views/AppHome.vue'
 import SetupGame from '@/views/SetupGame.vue'
 import RoundTurn from '@/views/RoundTurn.vue'
 import NotFound from '@/views/NotFound.vue'
-import createRouterMatomoTracking from 'brdgm-commons/src/util/router/createRouterMatomoTracking'
+import createRouterMatomoTracking from '@brdgm/brdgm-commons/src/util/router/createRouterMatomoTracking'
 import { name, version, appDeployName } from '@/../package.json'
 
 const LOCALSTORAGE_KEY = `${name}.route`
