@@ -7,41 +7,17 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     environment:
       name: Production
-      url: "https://brdgm.me/${{ steps.package_json.outputs.appDeployName }}"
+      url: "https://brdgm.me/${{ steps.deploy.outputs.app-deploy-name }}"
 
     steps:
-    - uses: actions/checkout@v4
-
-    - name: Read properties from package.json
-      id: package_json
-      uses: zoexx/github-action-json-file-properties@1.0.6
-      with:
-        file_path: package.json
-
-    - uses: actions/setup-node@v4
-      with:
-        node-version: 20
-        cache: npm
-
-    - run: npm ci
-    - run: npm run test:unit
-    - run: npm run build
-
-    - name: Copy to Site
-      uses: cpina/github-action-push-to-another-repository@v1.7.2
-      env:
-        API_TOKEN_GITHUB: ${{ secrets.GH_SITE_DEPLOY_PAT }}
-      with:
-        source-directory: dist
-        destination-repository-username: brdgm
-        destination-repository-name: brdgm.github.io
-        destination-github-username: ${{ secrets.GH_SITE_DEPLOY_USERNAME }}
-        user-email: ${{ secrets.GH_SITE_DEPLOY_EMAIL }}
-        user-name: ${{ secrets.GH_SITE_DEPLOY_NAME }}
-        target-branch: main
-        commit-message: deploy ${{ steps.package_json.outputs.appDeployName }} ${{ steps.package_json.outputs.version }}
-        target-directory: ${{ steps.package_json.outputs.appDeployName }}
+      - uses: brdgm/github-action-deploy@v1
+        id: deploy
+        with:
+          gh-site-deploy-pat: ${{ secrets.GH_SITE_DEPLOY_PAT }}
+          gh-site-deploy-username: ${{ secrets.GH_SITE_DEPLOY_USERNAME }}
+          gh-site-deploy-email: ${{ secrets.GH_SITE_DEPLOY_EMAIL }}
+          gh-site-deploy-name: ${{ secrets.GH_SITE_DEPLOY_NAME }}
