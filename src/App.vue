@@ -38,7 +38,7 @@
         <dt>Application Development</dt>
         <dd>Stefan Seifert</dd>
         <dt>Version</dt>
-        <dd>{{buildNumber}}</dd>
+        <dd>{{buildNumber}} (<a href="https://github.com/brdgm/blitzkrieg-solo-helper/releases" target="_blank" rel="noopener">Change Log</a>)</dd>
         <dt>Source Code (Apache-2.0 License)</dt>
         <dd><a href="https://github.com/brdgm/blitzkrieg-solo-helper" target="_blank" rel="noopener">https://github.com/brdgm/blitzkrieg-solo-helper</a></dd>
       </dl>
@@ -49,14 +49,14 @@
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { useStore } from '@/store'
-import AppHeader from 'brdgm-commons/src/components/structure/AppHeader.vue'
-import AppFooter from 'brdgm-commons/src/components/structure/AppFooter.vue'
-import ModalDialog from 'brdgm-commons/src/components/structure/ModalDialog.vue'
+import { useStateStore } from '@/store/state'
+import AppHeader from '@brdgm/brdgm-commons/src/components/structure/AppHeader.vue'
+import AppFooter from '@brdgm/brdgm-commons/src/components/structure/AppFooter.vue'
+import ModalDialog from '@brdgm/brdgm-commons/src/components/structure/ModalDialog.vue'
 import { version, description } from '@/../package.json'
 import { registerSW } from 'virtual:pwa-register'
-import { showModalIfExist } from 'brdgm-commons/src/util/modal/showModal'
-import onRegisteredSWCheckForUpdate from 'brdgm-commons/src/util/serviceWorker/onRegisteredSWCheckForUpdate'
+import { showModalIfExist } from '@brdgm/brdgm-commons/src/util/modal/showModal'
+import onRegisteredSWCheckForUpdate from '@brdgm/brdgm-commons/src/util/serviceWorker/onRegisteredSWCheckForUpdate'
 
 export default defineComponent({
   name: 'App',
@@ -76,7 +76,7 @@ export default defineComponent({
       inheritLocale: true,
       useScope: 'global'
     })
-    const store = useStore()
+    const state = useStateStore()
 
     // handle PWA updates with prompt if a new version is detected, check regularly for a new version
     const checkForNewVersionsIntervalSeconds = 1 * 60 * 60
@@ -90,21 +90,20 @@ export default defineComponent({
       }
     })
 
-    store.commit('initialiseStore')
-    locale.value = store.state.language
+    locale.value = state.language
     
-    const baseFontSize = ref(store.state.baseFontSize)
+    const baseFontSize = ref(state.baseFontSize)
 
-    return { t, locale, baseFontSize, updateServiceWorker }
+    return { t, state, locale, baseFontSize, updateServiceWorker }
   },
   methods: {
     setLocale(lang: string) {
-      this.$store.commit('language', lang)
-      this.locale = lang;
+      this.state.language = lang
+      this.locale = lang
     },
     zoomFontSize(payload: { baseFontSize: number }) {
       this.baseFontSize = payload.baseFontSize
-      this.$store.commit('zoomFontSize', this.baseFontSize)
+      this.state.baseFontSize = this.baseFontSize
     }
   }
 })

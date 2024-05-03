@@ -1,7 +1,7 @@
-import DifficultyLevel from './enum/DifficultyLevel';
-import Region from './enum/Region';
-import RegionSteps from './RegionSteps';
-import randomEnum from 'brdgm-commons/src/util/random/randomEnum';
+import DifficultyLevel from './enum/DifficultyLevel'
+import Region from './enum/Region'
+import RegionSteps from './RegionSteps'
+import randomEnum from '@brdgm/brdgm-commons/src/util/random/randomEnum'
 
 /**
  * Randomly picks a number of regions and advances the marker steps
@@ -27,5 +27,5 @@ export default function(level: DifficultyLevel) : RegionSteps[] {
     }
   }
 
-  return result.sort((a,b) => a.region - b.region);
+  return result.sort((a,b) => a.region - b.region)
 }

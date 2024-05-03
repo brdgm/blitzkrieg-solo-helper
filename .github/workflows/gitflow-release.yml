@@ -1,0 +1,77 @@
+name: GitFlow Release
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment:
+      name: Production
+      url: "https://brdgm.me/${{ steps.package_json.outputs.appDeployName }}"
+
+    permissions:
+      contents: write
+
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - uses: actions/setup-node@v4
+      with:
+        node-version: 20
+        cache: npm
+
+    - run: npm ci
+    - run: npm run test:unit
+    - run: npm run build
+
+    - name: Read properties from package.json
+      id: package_json
+      uses: zoexx/github-action-json-file-properties@1.0.6
+      with:
+        file_path: package.json
+
+    - name: set git config
+      run: |
+        git config user.name "GitHub Actions"
+        git config user.email noreply@github.com
+  
+    - name: Install git flow extensions
+      run: |
+        sudo apt-get install git-flow
+  
+    - run: git flow init --defaults        
+    - run: git flow release start ${{ steps.package_json.outputs.version }}
+    - run: git flow release finish ${{ steps.package_json.outputs.version }} --push --message "Release"
+
+    - name: Copy to Site
+      uses: cpina/github-action-push-to-another-repository@v1.7.2
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.GH_SITE_DEPLOY_PAT }}
+      with:
+        source-directory: dist
+        destination-repository-username: brdgm
+        destination-repository-name: brdgm.github.io
+        destination-github-username: ${{ secrets.GH_SITE_DEPLOY_USERNAME }}
+        user-email: ${{ secrets.GH_SITE_DEPLOY_EMAIL }}
+        user-name: ${{ secrets.GH_SITE_DEPLOY_NAME }}
+        target-branch: main
+        commit-message: deploy ${{ steps.package_json.outputs.appDeployName }} ${{ steps.package_json.outputs.version }}
+        target-directory: ${{ steps.package_json.outputs.appDeployName }}
+
+    - name: set next version
+      run: |
+        npm --no-git-tag-version version patch
+        git config user.name "GitHub Actions"
+        git config user.email noreply@github.com
+        git add package.json package-lock.json
+        git commit --message "set next version"
+        git push
+
+    - uses: ncipollo/release-action@v1
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        tag: ${{ steps.package_json.outputs.version }}
+        generateReleaseNotes: true
