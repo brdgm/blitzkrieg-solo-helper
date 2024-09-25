@@ -62,36 +62,38 @@
 
   <div class="space-legend float-end">
     <table>
-      <tr>
-        <td><img src="@/assets/space/propaganda.png" class="space-icon" alt=""></td>
-        <td>{{t('campaign.priority.1-propaganda')}}</td>
-      </tr>
-      <tr>
-        <td><img src="@/assets/space/strategic-advantage.png" class="space-icon" alt=""></td>
-      </tr>
-      <tr>
-        <td><img src="@/assets/space/propaganda.png" class="space-icon" alt=""></td>
-        <td>{{t('campaign.priority.3-propaganda')}}</td>
-      </tr>
-      <tr>
-        <td><img src="@/assets/space/industrial-production.png" class="space-icon" alt=""></td>
-        <td>{{t('campaign.priority.4-industrial-production')}}</td>
-      </tr>
-      <tr>
-        <td colspan="2"><img src="@/assets/space/improved-research.png" class="space-icon" alt=""><img src="@/assets/space/research.png" class="space-icon" alt=""></td>
-      </tr>
-      <tr>
-        <td><img src="@/assets/space/bombing.png" class="space-icon" alt=""></td>
-      </tr>
-      <tr>
-        <td><img src="@/assets/space/tactical-advantage.png" class="space-icon" alt=""></td>
-      </tr>
-      <tr>
-        <td><img src="@/assets/space/industrial-production.png" class="space-icon" alt=""></td>
-      </tr>
-      <tr>
-        <td><img src="@/assets/space/propaganda.png" class="space-icon" alt=""></td>
-      </tr>
+      <tbody>
+        <tr>
+          <td><img src="@/assets/space/propaganda.png" class="space-icon" alt=""></td>
+          <td>{{t('campaign.priority.1-propaganda')}}</td>
+        </tr>
+        <tr>
+          <td><img src="@/assets/space/strategic-advantage.png" class="space-icon" alt=""></td>
+        </tr>
+        <tr>
+          <td><img src="@/assets/space/propaganda.png" class="space-icon" alt=""></td>
+          <td>{{t('campaign.priority.3-propaganda')}}</td>
+        </tr>
+        <tr>
+          <td><img src="@/assets/space/industrial-production.png" class="space-icon" alt=""></td>
+          <td>{{t('campaign.priority.4-industrial-production')}}</td>
+        </tr>
+        <tr>
+          <td colspan="2"><img src="@/assets/space/improved-research.png" class="space-icon" alt=""><img src="@/assets/space/research.png" class="space-icon" alt=""></td>
+        </tr>
+        <tr>
+          <td><img src="@/assets/space/bombing.png" class="space-icon" alt=""></td>
+        </tr>
+        <tr>
+          <td><img src="@/assets/space/tactical-advantage.png" class="space-icon" alt=""></td>
+        </tr>
+        <tr>
+          <td><img src="@/assets/space/industrial-production.png" class="space-icon" alt=""></td>
+        </tr>
+        <tr>
+          <td><img src="@/assets/space/propaganda.png" class="space-icon" alt=""></td>
+        </tr>
+      </tbody>
     </table>
   </div>
 
