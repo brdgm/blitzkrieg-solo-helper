@@ -8,6 +8,9 @@
     "npm",
     "nvm"
   ],
+  "lockFileMaintenance": {
+    "enabled": true
+  },
   "npm": {
     "minimumReleaseAge": "3 days"
   },
