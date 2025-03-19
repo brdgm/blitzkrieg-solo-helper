@@ -1,4 +1,4 @@
-name: Build
+name: Test E2E
 
 on:
   push:
@@ -13,9 +13,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    container:
+      image: mcr.microsoft.com/playwright:v1.51.1-noble
+      options: --user 1001
 
     steps:
-      - uses: brdgm/github-action-build@v1
-        with:
-          sonar-token: ${{ secrets.SONARCLOUD_TOKEN }}
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: brdgm/github-action-test-e2e@v1
