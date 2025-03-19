@@ -1,4 +1,4 @@
-name: Build
+name: Test Playwright
 
 on:
   push:
@@ -19,7 +19,4 @@ jobs:
       options: --user 1001
 
     steps:
-      - uses: brdgm/github-action-build@main
-        with:
-          sonar-token: ${{ secrets.SONARCLOUD_TOKEN }}
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: brdgm/github-action-test-e2e@main
