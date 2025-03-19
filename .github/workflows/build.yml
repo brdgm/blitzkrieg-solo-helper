@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: brdgm/github-action-build@v1
+      - uses: brdgm/github-action-build@feature/playwright
         with:
           sonar-token: ${{ secrets.SONARCLOUD_TOKEN }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
