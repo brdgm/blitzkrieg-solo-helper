@@ -17,7 +17,7 @@
   },
   "packageRules": [
     {
-      "matchUpdateTypes": ["major", "minor", "patch"],
+      "matchUpdateTypes": ["major", "minor", "patch", "pin", "digest", "security"],
       "groupName": "dependencies"
     }
   ],
