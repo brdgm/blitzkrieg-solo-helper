@@ -5,6 +5,7 @@
     ":semanticCommitsDisabled",
     ":disableRateLimiting"
   ],
+  "labels": ["dependencies"],
   "npm": {
     "minimumReleaseAge": "3 days"
   },
