@@ -12,6 +12,7 @@
     {
       "matchUpdateTypes": ["major", "minor", "patch", "pin", "digest", "security"],
       "groupName": "dependencies",
+      "separateMajorMinor ": false,
       "dependencyDashboardApproval": true
     }
   ],
