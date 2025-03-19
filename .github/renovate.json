@@ -15,8 +15,7 @@
     {
       "matchUpdateTypes": ["major", "minor", "patch", "pin", "pinDigest", "digest", "lockFileMaintenance", "rollback", "bump", "replacement"],
       "groupName": "dependencies",
-      "separateMajorMinor ": false,
-      "dependencyDashboardApproval": true
+      "separateMajorMinor ": false
     }
   ],
   "ignoreDeps": [
