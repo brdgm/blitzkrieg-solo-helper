@@ -9,9 +9,6 @@
     "npm",
     "nvm"
   ],
-  "npm": {
-    "minimumReleaseAge": "3 days"
-  },
   "packageRules": [
     {
       "matchUpdateTypes": ["major", "minor", "patch", "pin", "digest", "security"],
