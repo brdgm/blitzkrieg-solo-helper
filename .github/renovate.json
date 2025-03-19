@@ -2,7 +2,8 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:recommended",
-    ":semanticCommitsDisabled"
+    ":semanticCommitsDisabled",
+    ":disableRateLimiting"
   ],
   "enabledManagers": [
     "npm",
@@ -17,7 +18,7 @@
   "packageRules": [
     {
       "matchUpdateTypes": ["major", "minor", "patch"],
-      "groupName": "all-dependencies"
+      "groupName": "dependencies"
     }
   ],
   "ignoreDeps": [
