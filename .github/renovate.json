@@ -1,0 +1,25 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    ":semanticCommitsDisabled",
+    ":disableRateLimiting"
+  ],
+  "enabledManagers": [
+    "npm",
+    "nvm"
+  ],
+  "npm": {
+    "minimumReleaseAge": "3 days"
+  },
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["major", "minor", "patch", "pin", "digest", "security"],
+      "groupName": "dependencies",
+      "dependencyDashboardApproval": true
+    }
+  ],
+  "ignoreDeps": [
+    "sass"
+  ]
+}
