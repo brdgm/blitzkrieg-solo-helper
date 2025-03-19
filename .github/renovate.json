@@ -13,6 +13,9 @@
     "enabled": true
   },
   "separateMajorMinor": false,
+  "vulnerabilityAlerts": {
+    "enabled": false
+  },
   "packageRules": [
     {
       "matchUpdateTypes": ["major", "minor", "patch", "pin", "pinDigest", "digest", "lockFileMaintenance"],
