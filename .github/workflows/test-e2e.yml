@@ -18,4 +18,4 @@ jobs:
       options: --user 1001
 
     steps:
-      - uses: brdgm/github-action-test-e2e@main
+      - uses: brdgm/github-action-test-e2e@v1
