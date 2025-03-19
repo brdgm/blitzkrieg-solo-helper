@@ -8,9 +8,12 @@
   "npm": {
     "minimumReleaseAge": "3 days"
   },
+  "lockFileMaintenance": {
+    "enabled": true
+  },
   "packageRules": [
     {
-      "matchUpdateTypes": ["major", "minor", "patch", "pin", "digest", "security"],
+      "matchUpdateTypes": ["major", "minor", "patch", "pin", "pinDigest", "digest", "lockFileMaintenance", "rollback", "bump", "replacement"],
       "groupName": "dependencies",
       "separateMajorMinor ": false,
       "dependencyDashboardApproval": true
