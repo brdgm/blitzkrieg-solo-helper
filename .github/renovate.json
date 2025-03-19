@@ -11,10 +11,10 @@
   "lockFileMaintenance": {
     "enabled": true
   },
-  "separateMajorMinor ": false,
+  "separateMajorMinor": false,
   "packageRules": [
     {
-      "matchUpdateTypes": ["major", "minor", "patch", "pin", "pinDigest", "digest", "lockFileMaintenance", "rollback", "bump", "replacement"],
+      "matchUpdateTypes": ["major", "minor", "patch", "pin", "pinDigest", "digest", "lockFileMaintenance"],
       "groupName": "dependencies"
     }
   ],
