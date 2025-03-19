@@ -9,16 +9,16 @@
     "npm",
     "nvm"
   ],
-  "lockFileMaintenance": {
-    "enabled": true
-  },
   "npm": {
     "minimumReleaseAge": "3 days"
   },
   "packageRules": [
     {
       "matchUpdateTypes": ["major", "minor", "patch", "pin", "digest", "security"],
-      "groupName": "dependencies"
+      "groupName": "dependencies",
+      "lockFileMaintenance": {
+        "enabled": true
+      }
     }
   ],
   "ignoreDeps": [
