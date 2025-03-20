@@ -1,29 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended",
-    ":semanticCommitsDisabled",
-    ":disableRateLimiting"
-  ],
-  "labels": ["dependencies"],
-  "npm": {
-    "minimumReleaseAge": "3 days"
-  },
-  "lockFileMaintenance": {
-    "enabled": true,
-    "schedule": ["after 8pm on friday"]
-  },
-  "separateMajorMinor": false,
-  "vulnerabilityAlerts": {
-    "enabled": false
-  },
-  "packageRules": [
-    {
-      "matchUpdateTypes": ["major", "minor", "patch", "pin", "pinDigest", "digest", "lockFileMaintenance"],
-      "groupName": "dependencies"
-    }
-  ],
-  "ignoreDeps": [
-    "sass"
+    "github>brdgm/renovate-config"
   ]
 }
