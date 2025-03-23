@@ -9,10 +9,15 @@ test('smoke test', async ({ page }) => {
 
   // setup game
   await expect(page.locator('h1')).toHaveText('Setup Game')
+  await page.getByRole('button', { name: 'Difficulty: Easy' }).click()
+  await page.getByRole('link', { name: 'Medium' }).click()
+  await page.getByRole('button', { name: 'Randomize Regions' }).click()
   await page.getByRole('button', { name: 'Start Game' }).click()
 
-  // play three rounds
+  // play a few rounds
   await page.getByRole('link', { name: 'Next Round' }).click()
+  await page.getByRole('link', { name: 'Next Round' }).click()
+  await page.getByRole('link', { name: 'Back' }).click()
   await page.getByRole('link', { name: 'Next Round' }).click()
   await page.getByRole('link', { name: 'Next Round' }).click()
 
