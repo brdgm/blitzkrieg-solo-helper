@@ -15,6 +15,6 @@ jobs:
       pull-requests: read
     runs-on: ubuntu-latest
     steps:
-      - uses: brdgm/github-action-release-drafter@main
+      - uses: brdgm/github-action-release-drafter@v1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
