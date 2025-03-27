@@ -49,6 +49,7 @@ export default defineConfigWithVueTs(
       }],
       'i18n-json/identical-placeholders': [2, {
         filePath: path.resolve('src/locales/en.json'),
+        ignoreTags: true,
       }],
     },
   },
