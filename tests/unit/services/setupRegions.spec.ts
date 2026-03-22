@@ -6,7 +6,9 @@ function executeBotRegionSetup(level : DifficultyLevel) : number {
   const regions = setupRegions(level)
 
   let stepsTotal = 0
-  regions.forEach(entry => stepsTotal += entry.steps)
+  for (const entry of regions) {
+    stepsTotal += entry.steps
+  }
   return stepsTotal
 }
 

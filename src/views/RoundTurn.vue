@@ -27,7 +27,7 @@ export default defineComponent({
     const { t } = useI18n()
     const route = useRoute()
 
-    const round = parseInt(route.params['round'] as string)
+    const round = Number.parseInt(route.params['round'] as string)
 
     return { t, round }
   },

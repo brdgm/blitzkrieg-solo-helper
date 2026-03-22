@@ -9,7 +9,7 @@ import randomEnum from '@brdgm/brdgm-commons/src/util/random/randomEnum'
  * @param level Difficulty level
  * @returns Steps to advance in selected regions
  */
-export default function(level: DifficultyLevel) : RegionSteps[] {
+export default function setupRegions(level: DifficultyLevel) : RegionSteps[] {
   const result : RegionSteps[] = []
 
   const numberRolls = level == DifficultyLevel.HARD ? 4 : 3
