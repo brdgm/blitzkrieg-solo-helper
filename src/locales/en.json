@@ -43,7 +43,7 @@
       "info6": "<b>Propaganda</b>: It receives victory points as normal.",
       "info7": "<b>Scientist unit</b>: Treat it as a 3-strength airforce unit.",
       "info8": "<b>Blitz unit</b>: If the AI bot has at least one unit remaining, perform step B of the AI bot’s turn again (using the same stratagem), but using the same theatre as the just-placed Blitz unit (if possible).",
-      "info9": "<i>You</i> play a <b>bombing effect</b>: Select one non-special weapon in the AI bot’s unit row (your choice) and discard it back into the research pile. If all the AI bot’s unit are special weapons, just choose one of those to discard instead."
+      "info9": "<i>You</i> play a <b>bombing effect</b>: Select one non-special weapon in the AI bot’s unit row (your choice) and discard it back into the research pile. If all the AI bot’s units are special weapons, just choose one of those to discard instead."
     }
   },
   "theatre": {
@@ -53,12 +53,12 @@
     "prio3": {
       "counterattack": "Theatre where you are in lead",
       "economic-warfare": "Industrial or bombing spaces available",
-      "for-the-glory": "Hightest VP campaign, then theatres with VP spaces",
+      "for-the-glory": "Highest VP campaign, then theatres with VP spaces",
       "research-development": "Research space available",
       "secure": "Theatre where AI bot is in lead"
     },
     "prio4": "Most empty spaces in open campaign",
-    "prio5": "Hightest VP for current campaign",
+    "prio5": "Highest VP for current campaign",
     "prio6": "Top > bottom"
   },
   "campaign": {
