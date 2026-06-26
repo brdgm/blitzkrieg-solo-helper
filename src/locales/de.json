@@ -29,7 +29,7 @@
       "prio2": "Gleichstand auf einem Kriegsschauplatz wird Führung des Gegners",
       "prio3": "Deine Führung auf einem Kriegsschauplatz wird Gleichstand",
       "prio4": "Führung des AI Bot wird größere Führung",
-      "prio5": "Größere Führung von Dir wird zu weniger großen Führung",
+      "prio5": "Größere Führung von Dir wird zu weniger großer Führung",
       "prio6": "Jede andere Änderung, die nicht dazu führt, dass Du einen Feldzug/Kriegsschauplatz gewinnst",
       "prio7": "Jede andere Änderung"
     },
@@ -55,9 +55,9 @@
       "economic-warfare": "Kriegsschauplatz mit verfügbarer Industrieproduktion oder Bombardierung",
       "for-the-glory": "Kriegsschauplatz mit den meisten KP, Kriegsschauplätze mit KP-Schlachtfeldern",
       "research-development": "Forschungs-Schlachtfelder verfügbar",
-      "secure": "Kriegsschauplatz wo der AI bot führt"
+      "secure": "Kriegsschauplatz, wo der AI bot führt"
     },
-    "prio4": "Die meisten freien Schlachtfelder in aktiven Feldzug",
+    "prio4": "Die meisten freien Schlachtfelder im aktiven Feldzug",
     "prio5": "Die meisten KP für den aktuellen Feldzug",
     "prio6": "Von oben links nach unten rechts"
   },
@@ -72,7 +72,7 @@
     "prio4": "Von links nach rechts",
     "priority": {
       "1-propaganda": "AI bot ≥20KP",
-      "3-propaganda": "Du führst ≥3VP",
+      "3-propaganda": "Du führst ≥3KP",
       "4-industrial-production": "AI bot ≤4 Einh."
     }
   },
@@ -86,7 +86,7 @@
       "research-development": "Spezialeinheit, wenn kein Forschungs-Schlachtfeld gewählt wurde"
     },
     "prio3": "Kein Schlachtfeld-Effekt: Einheit mit Stärke >0",
-    "prio4": "Letztes Feld des Feldzug: Einheiten, die keine Blitz-Einheiten sind",
+    "prio4": "Letztes Feld des Feldzugs: Einheiten, die keine Blitz-Einheiten sind",
     "prio5": "Wenn AI bot ≥20 KP: Einheit mit der größten Stärke",
     "prio6": "Wähle Einheit <b>#{unitRoll}</b> von links nach rechts (ggf. in einer Schleife)"
   },
